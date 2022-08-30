@@ -1,0 +1,71 @@
+nav h2 {
+    color: #31D2F2;
+}
+
+body{
+    background-color: #AFA99B;
+}
+
+main figure {
+    margin: 50px 50px;
+}
+
+#port-div {
+    display: inline-flex;
+}
+
+#foto {
+    height: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#background {
+    height: 550px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.containerCards {
+    margin: 50px;
+}
+
+.titulo {
+    margin: 20px 0px 0px 100px;
+    color: #212529;
+}
+
+.links {
+    text-decoration: none;
+    color: #241532;
+}
+
+.links:hover {
+    text-decoration: none;
+    color: #31D2F2;
+    font-size: 18px;
+}
+
+.code {
+    margin-left: -150px;
+}
+
+.cardStop {
+    height: 600px;
+    overflow: auto;
+    overflow-wrap: normal;
+}
+
+.youtubeVideo {
+    background-color: #212529;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #31D2F2;
+    border-radius: 7px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.videoName {
+    color: #31D2F2;
+    margin: auto auto;
+    text-align: center;
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Variables e impresión</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Ejercicios de Variables e impresión en Java</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="java.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="containerCards">
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Realizar un programa el cual solicite su nombre y apellidos.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller1;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio1 {
+                            
+                            private String name;
+                            private String surname;
+                            private Scanner input;
+                            
+                            public void Ejercicio1() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askName();
+                                name = captureDataString();
+                                
+                                askSurname();
+                                surname = captureDataString();
+                            }
+                            
+                            private void askName() {System.out.println("¿Cuál es tu nombre?");}
+                            private void askSurname() {System.out.println("¿Cuáles son tus apellidos?");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller1;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio2 {
+                            
+                            private String name;
+                            private String surname;
+                            private int old;
+                            private double height;
+                            private Scanner input;
+                            
+                            public void Ejercicio2() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askName();
+                                name = captureDataString();
+                                
+                                askSurname();
+                                surname = captureDataString();
+                                
+                                askOld();
+                                old = captureDataInt();
+                                
+                                askHeight();
+                                height = captureDataDouble();
+                            }
+                            
+                            private void askName() {System.out.println("¿Cuál es tu nombre?");}
+                            private void askSurname() {System.out.println("¿Cuáles son tus apellidos?");}
+                            private void askOld() {System.out.println("¿Cuál es tu edad?");}
+                            private void askHeight() {System.out.println("¿Cuál es tu estatura (en metros)?");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                            
+                            private double captureDataDouble() {
+                                return input.nextDouble();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. 
+                        Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</p><br>
+                    <pre class="code">
+                        package com.sofka.taller1;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio3 {
+                            
+                            private String name;
+                            private String surname;
+                            private String mother;
+                            private String father;
+                            private Scanner input;
+                            
+                            public void Ejercicio3() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askName();
+                                name = captureDataString();
+                                
+                                askSurname();
+                                surname = captureDataString();
+                                
+                                askMother();
+                                mother = captureDataString();
+                                
+                                askFather();
+                                father = captureDataString();
+                                
+                                System.out.println("Yo " + name + " " + surname + ", soy hijo de " + mother + " y " + father);
+                                
+                            }
+                            
+                            private void askName() {System.out.println("¿Cuál es tu nombre?");}
+                            private void askSurname() {System.out.println("¿Cuáles son tus apellidos?");}
+                            private void askMother() {System.out.println("¿Cuál es el nombre completo de tu madre?");}
+                            private void askFather() {System.out.println("¿Cuál es el nombre completo de tu padre?");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje 
+                        "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</p><br>
+                    <pre class="code">
+                        package com.sofka.taller1;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio4 {
+                            
+                            private String capitalCity;
+                            private String countryName;
+                            private Scanner input;
+                            
+                            public void Ejercicio4() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askCapitalCity();
+                                capitalCity = captureDataString();
+                                
+                                askCountryName();
+                                countryName = captureDataString();
+                                
+                                System.out.println("La ciudad " + capitalCity + ", es la capital del país " + countryName);
+                                
+                            }
+                            
+                            private void askCapitalCity() {System.out.println("Dime el nombre de una ciudad capital");}
+                            private void askCountryName() {System.out.println("Dime el nombre del país del cual la ciudad anterior es capital");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. 
+                        Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, 
+                        tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</p><br>
+                    <pre class="code">
+                        package com.sofka.taller1;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio5 {
+                            
+                            private String fullNameOwner;
+                            private String petName;
+                            private String type;
+                            private int oldPet;
+                            private Scanner input;
+                            
+                            public void Ejercicio5() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askFullNameOwner();
+                                fullNameOwner = captureString();
+                                
+                                askPetName();
+                                petName = captureString();
+                                
+                                askType();
+                                type = captureString();
+                                
+                                askOldPet();
+                                oldPet = captureInt();
+                                
+                                
+                                System.out.println(petName + " es un(a) " + type + ", el cual tiene " + oldPet + " años de edad y " + fullNameOwner + " es actualmente su dueño.");
+                                
+                            }
+                            
+                            private void askFullNameOwner() {System.out.println("¿Cuál es tu nombre completo?");}
+                            private void askPetName() {System.out.println("¿Cuál es el nombre de tu mascota?");}
+                            private void askType() {System.out.println("¿Qué tipo de mascota tienes?");}
+                            private void askOldPet() {System.out.println("¿Cuántos años tiene tu mascota?");}
+                            
+                            private String captureString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureInt() {
+                                return input.nextByte();
+                            }
+                            
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

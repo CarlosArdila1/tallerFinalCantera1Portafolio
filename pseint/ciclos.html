@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Ciclos</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Ejercicios de Ciclos</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="pseint.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="containerCards">
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Realizar la siguiente figura por medio del ciclo Para</p>
+                    <img src="../images/ciclos1.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E1
+                            Definir i, j Como Entero;
+                            
+                            Para i <- 1 Hasta 10 Con Paso 1 Hacer
+                                Para j <- 1 Hasta i Con Paso 1 Hacer
+                                    Escribir "*" Sin Saltar;
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                            
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Realizar la siguiente figura por medio del ciclo Mientras - Hacer</p>
+                    <img src="../images/ciclos2.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E2
+                            Definir i, j, k, control Como Entero;
+                            
+                            control <- 1;
+                            
+                            Mientras control = 1 Hacer
+                                
+                                Para i <- 10 Hasta 1 Con Paso - 1 Hacer //General
+                                Para j <- 9 Hasta (10 - i + 1) Con Paso -1 Hacer//espacios
+                                    Escribir " " Sin Saltar;
+                                FinPara
+                                Para k <- 10 Hasta i Con Paso -1 Hacer//asteriscos
+                                    Escribir "*" Sin Saltar;
+                                FinPara
+                                Escribir " ";// Salto de línea
+                                FinPara
+                                
+                                control <- 2;
+                                
+                            FinMientras
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p>
+                    <img src="../images/ciclos3.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E3
+                            Definir j, k, control Como Entero;
+                            Definir i Como Real;
+                            
+                            control <- 1;
+                            Escribir "             *             ";
+                            
+                            Repetir
+                                
+                                Para i <- 10 Hasta 1 Con Paso - 1 Hacer //General
+                                    Para k <- -1 Hasta i Con Paso 1 Hacer//espacios
+                                        Escribir " " Sin Saltar;
+                                    FinPara
+                                    Para j <- i Hasta 10 Con Paso 1 Hacer//asteriscos
+                                        Escribir "*" Sin Saltar;
+                                    FinPara
+                                    Para j <- i Hasta 10+1 Con Paso 1 Hacer//asteriscos
+                                        Escribir "*" Sin Saltar;
+                                    FinPara
+                                    Escribir " ";// Salto de línea
+                                FinPara
+                                
+                                Escribir "            ***            ";
+                                
+                                Para i <- 10 Hasta 10-2 Con Paso - 1 Hacer //General
+                                    Para k <- -1 Hasta i Con Paso 1 Hacer//espacios
+                                        Escribir " " Sin Saltar;
+                                    FinPara
+                                    Para j <- i Hasta 10 Con Paso 1 Hacer//asteriscos
+                                        Escribir "*" Sin Saltar;
+                                    FinPara
+                                    Para j <- i Hasta 10+1 Con Paso 1 Hacer//asteriscos
+                                        Escribir "*" Sin Saltar;
+                                    FinPara
+                                    Escribir " ";// Salto de línea
+                                FinPara
+                                
+                            Hasta Que control = 1
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; 
+                        esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</p>
+                        <img src="../images/ciclos4.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E4
+                            Definir n, i, res Como Entero;
+                            
+                            Escribir "Indique número para crear tabla de multiplicar";
+                            leer n;
+                            
+                            Para i<-1 Hasta 10 Con Paso 1 Hacer
+                                res <- i * n;
+                                Escribir i, "*", n, " = ", res;
+                            FinPara
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</p>
+                    <img src="../images/ciclos5.png" alt="" height="60" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E5
+                            Definir op Como Entero;
+                            Definir nombre Como Caracter;
+                            Repetir
+                                Borrar Pantalla;
+                                Escribir '1. Capturar nombre';
+                                Escribir '2. Saludar persona';
+                                Escribir '3. Salir del sistema';
+                                Leer op;
+                                Segun op  Hacer
+                                    1:
+                                        Escribir 'Ingrese su nombre';
+                                        Leer nombre;
+                                    2:
+                                        Escribir "Hola, ", nombre;
+                                    3:
+                                    De Otro Modo:
+                                        Escribir 'Opción inválida';
+                                FinSegun
+                                Escribir 'Presione cualquier tecla para continuar';
+                                Esperar Tecla;
+                            Hasta Que op=3
+                            Escribir "Vuelva pronto";
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 6</h4>
+                    <p>Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. 
+                        Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos 
+                        verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el 
+                        sistema debe terminar cuando el usuario así lo indique.</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E6
+                            Definir nombreC1, nombreC2, nombreC3, empresaC1, empresaC2, empresaC3 Como Caracter;
+                            definir numeroC1, numeroC2, numeroC3, contador, opcion, opcionE Como Entero;
+                            Definir contacto1, contacto2, contacto3, agregarContacto, contactoExistente Como Logico;
+                            
+                            contacto1<-Falso;
+                            nombreC1<-"";
+                            numeroC1<-0;
+                            empresaC1<-"";
+                            
+                            contacto2<-Falso;
+                            nombreC2<-"";
+                            numeroC2<-0;
+                            empresaC2<-"";
+                            
+                            contacto3<-Falso;
+                            nombreC3<-"";
+                            numeroC3<-0;
+                            empresaC3<-"";
+                            
+                            agregarContacto<-Falso;
+                            
+                            Repetir
+                                contactoExistente<-Falso;
+                                contador<-0;
+                                
+                                Limpiar Pantalla;
+                                Escribir "****TELÉFONO****";
+                                Escribir "**Menú de ususario";
+                                Escribir "";
+                                Escribir "1. Añadir contacto";
+                                Escribir "2. Buscar contacto";
+                                Escribir "3. Eliminar contacto";
+                                Escribir "4. Salir";
+                                Escribir Sin Saltar "Su opción: ";
+                                leer opcion;
+                                Limpiar Pantalla;
+                                
+                                Si (opcion = 1 O opcion = 2 O opcion = 3) Entonces
+                                    Si (nombreC1 <> "" Y numeroC1 > 0 Y empresaC1 <> "") Entonces
+                                        contactoExistente<-Verdadero;
+                                        contacto1<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreC2 <> "" Y numeroC2 > 0 Y empresaC2 <> "") Entonces
+                                        contactoExistente<-Verdadero;
+                                        contacto2<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreC3 <> "" Y numeroC3 > 0 Y empresaC3 <> "") Entonces
+                                        contactoExistente<-Verdadero;
+                                        contacto3<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                FinSi
+                                
+                                Segun opcion Hacer
+                                    1://Agregar contactos
+                                        Si (contador < 3) Entonces
+                                            agregarContacto<-Falso;
+                                            Limpiar Pantalla;
+                                            Escribir "AÑADIR CONTACTO:";
+                                            Escribir "";
+                                            //Agregar contacto 1
+                                            Si (NO contacto1 Y NO agregarContacto) Entonces
+                                                Escribir "Nombre del contacto: ";
+                                                leer nombreC1;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC1;
+                                                Escribir "Organización: ";
+                                                leer empresaC1;
+                                                Si (nombreC1 <> "" Y numeroC1 > 0 Y empresaC1 <> "") Entonces
+                                                    Si (numeroC1 <> numeroC2 Y numeroC1 <> numeroC3) Entonces
+                                                        Escribir "El contacto #", contador + 1,": ***", nombreC1, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarContacto <- Verdadero;
+                                                    SiNo
+                                                        nombreC1<-"";
+                                                        numeroC1<-0;
+                                                        empresaC1<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El contacto ya existía";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarContacto <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC1<-"";
+                                                    numeroC1<-0;
+                                                    empresaC1<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Agregar contacto 2
+                                            Si (NO contacto2 Y NO agregarContacto) Entonces
+                                                Escribir "Nombre del contacto: ";
+                                                leer nombreC2;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC2;
+                                                Escribir "Organización: ";
+                                                leer empresaC2;
+                                                Si (nombreC2 <> "" Y numeroC2 > 0 Y empresaC2 <> "") Entonces
+                                                    Si (numeroC2 <> numeroC1 Y numeroC2 <> numeroC3) Entonces
+                                                        Escribir "El contacto #", contador + 1,": ***", nombreC2, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarContacto <- Verdadero;
+                                                    SiNo
+                                                        nombreC2<-"";
+                                                        numeroC2<-0;
+                                                        empresaC2<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El contacto ya existía";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarContacto <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC2<-"";
+                                                    numeroC2<-0;
+                                                    empresaC2<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Agregar contacto 3
+                                            Si (NO contacto3 Y NO agregarContacto) Entonces
+                                                Escribir "Nombre del contacto: ";
+                                                leer nombreC3;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC3;
+                                                Escribir "Organización: ";
+                                                leer empresaC3;
+                                                Si (nombreC3 <> "" Y numeroC3 > 0 Y empresaC3 <> "") Entonces
+                                                    Si (numeroC3 <> numeroC1 Y numeroC3 <> numeroC2) Entonces
+                                                        Escribir "El contacto #", contador + 1,": ***", nombreC3, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarContacto <- Verdadero;
+                                                    SiNo
+                                                        nombreC3<-"";
+                                                        numeroC3<-0;
+                                                        empresaC3<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El contacto ya existía";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarContacto <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC3<-"";
+                                                    numeroC3<-0;
+                                                    empresaC3<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            
+                                        SiNo
+                                            Escribir "Lo sentimos, has alcanzado el número de contactos máximos permitidos";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    2://Buscar contactos
+                                        Escribir "CONTACTOS ENCONTRADOS:";
+                                        Escribir "";
+                                        Si (contactoExistente = Verdadero) Entonces
+                                            Si (contacto1 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "1. ", "CONTACTO";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC1;
+                                                Escribir "Número: ", numeroC1;
+                                                Escribir "Organización: ", empresaC1;
+                                            FinSi
+                                            Si (contacto2 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "2. ", "CONTACTO";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC2;
+                                                Escribir "Número: ", numeroC2;
+                                                Escribir "Organización: ", empresaC2;
+                                            FinSi
+                                            Si (contacto3 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "3. ", "CONTACTO";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC3;
+                                                Escribir "Número: ", numeroC3;
+                                                Escribir "Organización: ", empresaC3;
+                                            FinSi
+                                            Escribir "";
+                                            Escribir "*******";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        SiNo
+                                            Limpiar Pantalla;
+                                            Escribir "";
+                                            Escribir "No se encontró ningún contacto existente.";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    3://Eliminar contactos
+                                        Si (contactoExistente = Verdadero) Entonces
+                                            Limpiar Pantalla;
+                                            
+                                            Si (contacto1 = Verdadero) Entonces
+                                                Escribir "1. ", nombreC1;
+                                            FinSi
+                                            Si (contacto2 = Verdadero) Entonces
+                                                Escribir "2. ", nombreC2;
+                                            FinSi
+                                            Si (contacto3= Verdadero) Entonces
+                                                Escribir "3. ", nombreC3;
+                                            FinSi
+                                            Escribir "";
+                                            Escribir "Número de contacto a eliminar: ";
+                                            Leer opcionE;
+                                            Limpiar Pantalla;
+                                            
+                                            Segun opcionE Hacer
+                                                1:
+                                                    contacto1<- Falso;
+                                                    nombreC1<-"";
+                                                    numeroC1<-0;
+                                                    empresaC1<-"";
+                                                    Escribir "Eliminación exitosa";
+                                                2:
+                                                    contacto2<- Falso;
+                                                    nombreC2<-"";
+                                                    numeroC2<-0;
+                                                    empresaC2<-"";
+                                                    Escribir "Eliminación exitosa";
+                                                3:
+                                                    contacto3<- Falso;
+                                                    nombreC3<-"";
+                                                    numeroC3<-0;
+                                                    empresaC3<-"";
+                                                    Escribir "Eliminación exitosa";
+                                                De Otro Modo:
+                                                    Escribir "Contacto inexistente";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                            FinSegun
+                                            
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                            
+                                        SiNo
+                                            Limpiar Pantalla;
+                                            Escribir "";
+                                            Escribir "No se encontró ningún contacto existente.";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    De Otro Modo:
+                                        Escribir "Presione cualquier tecla para continuar";
+                                        Esperar Tecla;
+                                FinSegun
+                            Hasta Que opcion = 4
+                            Escribir "Salida exitosa";
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 7</h4>
+                    <p>El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar 
+                        los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, 
+                        y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, 
+                        retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
+                        Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E7
+                            Definir nombreC1, nombreC2, nombreC3, nombreC4, nombreC5 Como Caracter;
+                            Definir numeroC1, numeroC2, numeroC3, numeroC4, numeroC5, contador, opcion, opcionR Como Entero;
+                            Definir marcaC1, marcaC2, marcaC3, marcaC4, marcaC5 Como Caracter;
+                            Definir placaC1, placaC2, placaC3, placaC4, placaC5 Como Caracter;
+                            Definir cliente1, cliente2, cliente3, cliente4, cliente5, agregarCliente, clienteExistente Como Logico;
+                            
+                            cliente1<-Falso;
+                            nombreC1<-"";
+                            numeroC1<-0;
+                            marcaC1<-"";
+                            placaC1<-"";
+                            
+                            cliente2<-Falso;
+                            nombreC2<-"";
+                            numeroC2<-0;
+                            marcaC2<-"";
+                            placaC2<-"";
+                            
+                            cliente3<-Falso;
+                            nombreC3<-"";
+                            numeroC3<-0;
+                            marcaC3<-"";
+                            placaC3<-"";
+                            
+                            cliente4<-Falso;
+                            nombreC4<-"";
+                            numeroC4<-0;
+                            marcaC4<-"";
+                            placaC4<-"";
+                            
+                            cliente5<-Falso;
+                            nombreC5<-"";
+                            numeroC5<-0;
+                            marcaC5<-"";
+                            placaC5<-"";
+                            
+                            agregarCliente<-Falso;
+                            
+                            Repetir
+                                clienteExistente<-Falso;
+                                contador<-0;
+                                
+                                Limpiar Pantalla;
+                                Escribir "*PARQUEADERO EL GUARDIÁN*";
+                                Escribir "**Menú de ususario";
+                                Escribir "";
+                                Escribir "1. Ingresar vehículo";
+                                Escribir "2. Consultar vehículos";
+                                Escribir "3. Retirar vehículo";
+                                Escribir "4. Salir";
+                                Escribir Sin Saltar "Su opción: ";
+                                leer opcion;
+                                Limpiar Pantalla;
+                                
+                                Si (opcion = 1 O opcion = 2 O opcion = 3) Entonces
+                                    Si (nombreC1 <> "" Y numeroC1 > 0 Y marcaC1 <> "" Y placaC1 <> "") Entonces
+                                        clienteExistente<-Verdadero;
+                                        cliente1<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreC2 <> "" Y numeroC2 > 0 Y marcaC2 <> "" Y placaC2 <> "") Entonces
+                                        clienteExistente<-Verdadero;
+                                        cliente2<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreC3 <> "" Y numeroC3 > 0 Y marcaC3 <> "" Y placaC3 <> "") Entonces
+                                        clienteExistente<-Verdadero;
+                                        cliente3<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreC4 <> "" Y numeroC4 > 0 Y marcaC4 <> "" Y placaC4 <> "") Entonces
+                                        clienteExistente<-Verdadero;
+                                        cliente4<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreC5 <> "" Y numeroC5 > 0 Y marcaC5 <> "" Y placaC5 <> "") Entonces
+                                        clienteExistente<-Verdadero;
+                                        cliente5<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                FinSi
+                                
+                                Segun opcion Hacer
+                                    1://Ingresar vehículo
+                                        Si contador < 5 Entonces
+                                            agregarCliente<-Falso;
+                                            Limpiar Pantalla;
+                                            Escribir "INGRESAR VEHÍCULO:";
+                                            Escribir "";
+                                            //Agregar vehículo 1
+                                            Si (NO cliente1 Y NO agregarCliente) Entonces
+                                                Escribir "Nombre del cliente: ";
+                                                leer nombreC1;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC1;
+                                                Escribir "Marca del vehículo: ";
+                                                leer marcaC1;
+                                                Escribir "Placa del vehículo: ";
+                                                leer placaC1;
+                                                Si (nombreC1 <> "" Y numeroC1 > 0 Y marcaC1 <> "" Y placaC1 <> "") Entonces
+                                                    Si (placaC1 <> placaC2 Y placaC1 <> placaC3 Y placaC1 <> placaC4 Y placaC1 <> placaC5) Entonces
+                                                        Escribir "El vehículo #", contador + 1,", con placa número ", placaC1, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    SiNo
+                                                        nombreC1<-"";
+                                                        numeroC1<-0;
+                                                        marcaC1<-"";
+                                                        placaC1<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El vehículo ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC1<-"";
+                                                    numeroC1<-0;
+                                                    marcaC1<-"";
+                                                    placaC1<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Agregar vehículo 2
+                                            Si (NO cliente2 Y NO agregarCliente) Entonces
+                                                Escribir "Nombre del cliente: ";
+                                                leer nombreC2;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC2;
+                                                Escribir "Marca del vehículo: ";
+                                                leer marcaC2;
+                                                Escribir "Placa del vehículo: ";
+                                                leer placaC2;
+                                                Si (nombreC2 <> "" Y numeroC2 > 0 Y marcaC2 <> "" Y placaC2 <> "") Entonces
+                                                    Si (placaC2 <> placaC1 Y placaC2 <> placaC3 Y placaC2 <> placaC4 Y placaC2 <> placaC5) Entonces
+                                                        Escribir "El vehículo #", contador + 1,", con placa número ", placaC2, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    SiNo
+                                                        nombreC2<-"";
+                                                        numeroC2<-0;
+                                                        marcaC2<-"";
+                                                        placaC2<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El vehículo ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC2<-"";
+                                                    numeroC2<-0;
+                                                    marcaC2<-"";
+                                                    placaC2<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Agregar vehículo 3
+                                            Si (NO cliente3 Y NO agregarCliente) Entonces
+                                                Escribir "Nombre del cliente: ";
+                                                leer nombreC3;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC3;
+                                                Escribir "Marca del vehículo: ";
+                                                leer marcaC3;
+                                                Escribir "Placa del vehículo: ";
+                                                leer placaC3;
+                                                Si (nombreC3 <> "" Y numeroC3 > 0 Y marcaC3 <> "" Y placaC3 <> "") Entonces
+                                                    Si (placaC3 <> placaC1 Y placaC3 <> placaC2 Y placaC3 <> placaC4 Y placaC3 <> placaC5) Entonces
+                                                        Escribir "El vehículo #", contador + 1,", con placa número ", placaC3, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    SiNo
+                                                        nombreC3<-"";
+                                                        numeroC3<-0;
+                                                        marcaC3<-"";
+                                                        placaC3<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El vehículo ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC3<-"";
+                                                    numeroC3<-0;
+                                                    marcaC3<-"";
+                                                    placaC3<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Agregar vehículo 4
+                                            Si (NO cliente4 Y NO agregarCliente) Entonces
+                                                Escribir "Nombre del cliente: ";
+                                                leer nombreC4;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC4;
+                                                Escribir "Marca del vehículo: ";
+                                                leer marcaC4;
+                                                Escribir "Placa del vehículo: ";
+                                                leer placaC4;
+                                                Si (nombreC4 <> "" Y numeroC4 > 0 Y marcaC4 <> "" Y placaC4 <> "") Entonces
+                                                    Si (placaC4 <> placaC1 Y placaC4 <> placaC2 Y placaC4 <> placaC3 Y placaC4 <> placaC5) Entonces
+                                                        Escribir "El vehículo #", contador + 1,", con placa número ", placaC4, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    SiNo
+                                                        nombreC4<-"";
+                                                        numeroC4<-0;
+                                                        marcaC4<-"";
+                                                        placaC4<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El vehículo ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC4<-"";
+                                                    numeroC4<-0;
+                                                    marcaC4<-"";
+                                                    placaC4<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Agregar vehículo 5
+                                            Si (NO cliente5 Y NO agregarCliente) Entonces
+                                                Escribir "Nombre del cliente: ";
+                                                leer nombreC5;
+                                                Escribir "Teléfono: ";
+                                                leer numeroC5;
+                                                Escribir "Marca del vehículo: ";
+                                                leer marcaC5;
+                                                Escribir "Placa del vehículo: ";
+                                                leer placaC5;
+                                                Si (nombreC5 <> "" Y numeroC5 > 0 Y marcaC5 <> "" Y placaC5 <> "") Entonces
+                                                    Si (placaC5 <> placaC1 Y placaC5 <> placaC2 Y placaC5 <> placaC3 Y placaC5 <> placaC4) Entonces
+                                                        Escribir "El vehículo #", contador + 1,", con placa número ", placaC5, "*** se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    SiNo
+                                                        nombreC5<-"";
+                                                        numeroC5<-0;
+                                                        marcaC5<-"";
+                                                        placaC5<-"";
+                                                        Limpiar Pantalla;
+                                                        Escribir "El vehículo ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarCliente <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreC5<-"";
+                                                    numeroC5<-0;
+                                                    marcaC5<-"";
+                                                    placaC5<-"";
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por diligenciar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                        SiNo
+                                            Escribir "Lo sentimos, hemos alcanzado el número de vehículos máximos permitidos";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    2://Consultar vehículos
+                                        Escribir "VEHÍCULOS ENCONTRADOS:";
+                                        Escribir "";
+                                        Si (clienteExistente = Verdadero) Entonces
+                                            Si (cliente1 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "1. ", "CLIENTE";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC1;
+                                                Escribir "Número telefónico: ", numeroC1;
+                                                Escribir "Marca: ", marcaC1;
+                                                Escribir "Placa: ", placaC1;
+                                            FinSi
+                                            Si (cliente2 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "2. ", "CLIENTE";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC2;
+                                                Escribir "Número telefónico: ", numeroC2;
+                                                Escribir "Marca: ", marcaC2;
+                                                Escribir "Placa: ", placaC2;
+                                            FinSi
+                                            Si (cliente3 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "3. ", "CLIENTE";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC3;
+                                                Escribir "Número telefónico: ", numeroC3;
+                                                Escribir "Marca: ", marcaC3;
+                                                Escribir "Placa: ", placaC3;
+                                            FinSi
+                                            Si (cliente4 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "4. ", "CLIENTE";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC4;
+                                                Escribir "Número telefónico: ", numeroC4;
+                                                Escribir "Marca: ", marcaC4;
+                                                Escribir "Placa: ", placaC4;
+                                            FinSi
+                                            Si (cliente5 = Verdadero) Entonces
+                                                Escribir "";
+                                                Escribir "5. ", "CLIENTE";
+                                                Escribir "";
+                                                Escribir "Nombre: ", nombreC5;
+                                                Escribir "Número telefónico: ", numeroC5;
+                                                Escribir "Marca: ", marcaC5;
+                                                Escribir "Placa: ", placaC5;
+                                            FinSi
+                                            Escribir "";
+                                            Escribir "*******";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        SiNo
+                                            Limpiar Pantalla;
+                                            Escribir "";
+                                            Escribir "No se encontró ningún vehículo existente.";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    3://Retirar vehículo
+                                        Si (clienteExistente = Verdadero) Entonces
+                                            Limpiar Pantalla;
+                                            
+                                            Si (cliente1 = Verdadero) Entonces
+                                                Escribir "1. ", placaC1;
+                                            FinSi
+                                            Si (cliente2 = Verdadero) Entonces
+                                                Escribir "2. ", placaC2;
+                                            FinSi
+                                            Si (cliente3= Verdadero) Entonces
+                                                Escribir "3. ", placaC3;
+                                            FinSi
+                                            Si (cliente4= Verdadero) Entonces
+                                                Escribir "4. ", placaC4;
+                                            FinSi
+                                            Si (cliente3= Verdadero) Entonces
+                                                Escribir "5. ", placaC5;
+                                            FinSi
+                                            Escribir "";
+                                            Escribir "Número de placa del vehículo a retirar: ";
+                                            Leer opcionR;
+                                            Limpiar Pantalla;
+                                            
+                                            Segun opcionR Hacer
+                                                1:
+                                                    cliente1<- Falso;
+                                                    nombreC1<-"";
+                                                    numeroC1<-0;
+                                                    marcaC1<-"";
+                                                    placaC1<-"";
+                                                    Escribir "Retiro exitoso, por favor diríjase a la taquilla";
+                                                2:
+                                                    cliente2<- Falso;
+                                                    nombreC2<-"";
+                                                    numeroC2<-0;
+                                                    marcaC2<-"";
+                                                    placaC2<-"";
+                                                    Escribir "Retiro exitoso, por favor diríjase a la taquilla";
+                                                3:
+                                                    cliente3<- Falso;
+                                                    nombreC3<-"";
+                                                    numeroC3<-0;
+                                                    marcaC3<-"";
+                                                    placaC3<-"";
+                                                    Escribir "Retiro exitoso, por favor diríjase a la taquilla";
+                                                4:
+                                                    cliente4<- Falso;
+                                                    nombreC4<-"";
+                                                    numeroC4<-0;
+                                                    marcaC4<-"";
+                                                    placaC4<-"";
+                                                    Escribir "Retiro exitoso, por favor diríjase a la taquilla";
+                                                5:
+                                                    cliente5<- Falso;
+                                                    nombreC5<-"";
+                                                    numeroC5<-0;
+                                                    marcaC5<-"";
+                                                    placaC5<-"";
+                                                    Escribir "Retiro exitoso, por favor diríjase a la taquilla";
+                                                De Otro Modo:
+                                                    Escribir "Vehículo inexistente";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                            FinSegun
+                                            
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                            
+                                        SiNo
+                                            Limpiar Pantalla;
+                                            Escribir "";
+                                            Escribir "No se encontró ningún vehículo.";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                        
+                                    De Otro Modo:
+                                        Escribir "Presione cualquier tecla para continuar";
+                                        Esperar Tecla;
+                                FinSegun
+
+                            Hasta Que opcion = 4
+                            Escribir "Salida exitosa";
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 8</h4>
+                    <p>La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer 
+                        quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, 
+                        consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar 
+                        cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller3_E8
+                            Definir usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8, agregarUsuario, usuarioExistente Como Logico;;
+                            Definir nombreU1, nombreU2, nombreU3, nombreU4, nombreU5, nombreU6, nombreU7, nombreU8 Como Caracter;
+                            Definir cedulaU1, cedulaU2, cedulaU3, cedulaU4, cedulaU5, cedulaU6, cedulaU7, cedulaU8, opcion, contador Como Entero;
+                            Definir pruebaU1, pruebaU2, pruebaU3, pruebaU4, pruebaU5, pruebaU6, pruebaU7, pruebaU8 Como Entero;
+                            
+                            usuario1 <- Falso;
+                            nombreU1<-"";
+                            cedulaU1<-0;
+                            pruebaU1<-0;
+                            usuario2 <- Falso;
+                            nombreU2<-"";
+                            cedulaU2<-0;
+                            pruebaU2<-0;
+                            usuario3 <- Falso;
+                            nombreU3<-"";
+                            cedulaU3<-0;
+                            pruebaU3<-0;
+                            usuario4 <- Falso;
+                            nombreU4<-"";
+                            cedulaU4<-0;
+                            pruebaU4<-0;
+                            usuario5 <- Falso;
+                            nombreU5<-"";
+                            cedulaU5<-0;
+                            pruebaU5<-0;
+                            usuario6 <- Falso;
+                            nombreU6<-"";
+                            cedulaU6<-0;
+                            pruebaU6<-0;
+                            usuario7 <- Falso;
+                            nombreU7<-"";
+                            cedulaU7<-0;
+                            pruebaU7<-0;
+                            usuario8 <- Falso;
+                            nombreU8<-"";
+                            cedulaU8<-0;
+                            pruebaU8<-0;
+                            
+                            agregarUsuario<-Falso;
+                            
+                            Repetir
+                                usuarioExistente<-Falso;
+                                contador<-0;
+                                
+                                Limpiar Pantalla;
+                                Escribir "***Escuela automovilística El Maestro***";
+                                Escribir "**Menú de ususario";
+                                Escribir "";
+                                Escribir "1. Registrar usuario";
+                                Escribir "2. Consultar usuarios";
+                                Escribir "3. Consultar resultados";
+                                Escribir "4. Salir";
+                                Escribir Sin Saltar "Su opción: ";
+                                leer opcion;
+                                Limpiar Pantalla;
+                                
+                                Si (opcion = 1 O opcion = 2 O opcion = 3) Entonces
+                                    Si (nombreU1 <> "" Y cedulaU1 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario1<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreU2 <> "" Y cedulaU2 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario2<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreU3 <> "" Y cedulaU3 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario3<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreU4 <> "" Y cedulaU4 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario4<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreU5 <> "" Y cedulaU5 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario5<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreU6 <> "" Y cedulaU6 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario6<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreU7 <> "" Y cedulaU7 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario7<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                    Si (nombreU8 <> "" Y cedulaU8 > 0) Entonces
+                                        usuarioExistente<-Verdadero;
+                                        usuario8<-Verdadero;
+                                        contador <- contador + 1;
+                                    FinSi
+                                FinSi
+                                
+                                Segun opcion Hacer
+                                    1://Registrar usuarios
+                                        Si (contador < 8) Entonces
+                                            agregarUsuario<-Falso;
+                                            Limpiar Pantalla;
+                                            Escribir "INGRESAR USUARIO:";
+                                            Escribir "";
+                                            //Registrar usuario 1
+                                            Si (NO usuario1 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU1;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU1;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU1;
+                                                Si (nombreU1 <> "" Y cedulaU1 > 0 Y pruebaU1 > 0) Entonces
+                                                    Si (cedulaU1 <> cedulaU2 Y cedulaU1 <> cedulaU3 Y cedulaU1 <> cedulaU4 Y cedulaU1 <> cedulaU5 Y cedulaU1 <> cedulaU6 Y cedulaU1 <> cedulaU7 Y cedulaU1 <> cedulaU8) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU1, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU1<-"";
+                                                        cedulaU1<-0;
+                                                        pruebaU1<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresado";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU1<-"";
+                                                    cedulaU1<-0;
+                                                    pruebaU1<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Registrar usuario 2
+                                            Si (NO usuario2 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU2;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU2;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU2;
+                                                Si (nombreU2 <> "" Y cedulaU2 > 0 Y pruebaU2 > 0) Entonces
+                                                    Si (cedulaU2 <> cedulaU1 Y cedulaU2 <> cedulaU3 Y cedulaU2 <> cedulaU4 Y cedulaU2 <> cedulaU5 Y cedulaU2 <> cedulaU6 Y cedulaU2 <> cedulaU7 Y cedulaU2 <> cedulaU8) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU2, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU2<-"";
+                                                        cedulaU2<-0;
+                                                        pruebaU2<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU2<-"";
+                                                    cedulaU2<-0;
+                                                    pruebaU2<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Registrar usuario 3
+                                            Si (NO usuario3 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU3;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU3;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU3;
+                                                Si (nombreU3 <> "" Y cedulaU3 > 0 Y pruebaU3 > 0) Entonces
+                                                    Si (cedulaU3 <> cedulaU1 Y cedulaU3 <> cedulaU2 Y cedulaU3 <> cedulaU4 Y cedulaU3 <> cedulaU5 Y cedulaU3 <> cedulaU6 Y cedulaU3 <> cedulaU7 Y cedulaU3 <> cedulaU8) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU3, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU3<-"";
+                                                        cedulaU3<-0;
+                                                        pruebaU3<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU3<-"";
+                                                    cedulaU3<-0;
+                                                    pruebaU3<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Registrar usuario 4
+                                            Si (NO usuario4 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU4;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU4;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU4;
+                                                Si (nombreU3 <> "" Y cedulaU3 > 0 Y pruebaU4 > 0) Entonces
+                                                    Si (cedulaU4 <> cedulaU1 Y cedulaU4 <> cedulaU2 Y cedulaU4 <> cedulaU3 Y cedulaU4 <> cedulaU5 Y cedulaU4 <> cedulaU6 Y cedulaU4 <> cedulaU7 Y cedulaU4 <> cedulaU8) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU4, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU4<-"";
+                                                        cedulaU4<-0;
+                                                        pruebaU4<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU4<-"";
+                                                    cedulaU4<-0;
+                                                    pruebaU4<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Registrar usuario 5
+                                            Si (NO usuario5 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU5;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU5;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU5;
+                                                Si (nombreU5 <> "" Y cedulaU5 > 0 Y pruebaU5 > 0) Entonces
+                                                    Si (cedulaU5 <> cedulaU1 Y cedulaU5 <> cedulaU2 Y cedulaU5 <> cedulaU3 Y cedulaU5 <> cedulaU4 Y cedulaU5 <> cedulaU6 Y cedulaU5 <> cedulaU7 Y cedulaU5 <> cedulaU8) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU5, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU5<-"";
+                                                        cedulaU5<-0;
+                                                        pruebaU5<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU5<-"";
+                                                    cedulaU5<-0;
+                                                    pruebaU5<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Registrar usuario 6
+                                            Si (NO usuario6 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU6;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU6;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU6;
+                                                Si (nombreU6 <> "" Y cedulaU6 > 0 Y pruebaU6 > 0) Entonces
+                                                    Si (cedulaU6 <> cedulaU1 Y cedulaU6 <> cedulaU2 Y cedulaU6 <> cedulaU3 Y cedulaU6 <> cedulaU4 Y cedulaU6 <> cedulaU5 Y cedulaU6 <> cedulaU7 Y cedulaU6 <> cedulaU8) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU6, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU6<-"";
+                                                        cedulaU6<-0;
+                                                        pruebaU6<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU6<-"";
+                                                    cedulaU6<-0;
+                                                    pruebaU6<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Registrar usuario 7
+                                            Si (NO usuario7 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU7;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU7;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU7;
+                                                Si (nombreU7 <> "" Y cedulaU7 > 0 Y pruebaU7 > 0) Entonces
+                                                    Si (cedulaU7 <> cedulaU1 Y cedulaU7 <> cedulaU2 Y cedulaU7 <> cedulaU3 Y cedulaU7 <> cedulaU4 Y cedulaU7 <> cedulaU5 Y cedulaU7 <> cedulaU6 Y cedulaU7 <> cedulaU8) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU7, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU7<-"";
+                                                        cedulaU7<-0;
+                                                        pruebaU7<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU7<-"";
+                                                    cedulaU7<-0;
+                                                    pruebaU7<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                            //Registrar usuario 8
+                                            Si (NO usuario8 Y NO agregarUsuario) Entonces
+                                                Escribir "Nombre del usuario: ";
+                                                leer nombreU8;
+                                                Escribir "Cédula: ";
+                                                leer cedulaU8;
+                                                Escribir "Ingrese resultado de la prueba (1 - 100):";
+                                                leer pruebaU8;
+                                                Si (nombreU8 <> "" Y cedulaU8 > 0 Y pruebaU8 > 0) Entonces
+                                                    Si (cedulaU8 <> cedulaU1 Y cedulaU8 <> cedulaU2 Y cedulaU8 <> cedulaU3 Y cedulaU8 <> cedulaU4 Y cedulaU8 <> cedulaU5 Y cedulaU8 <> cedulaU6 Y cedulaU8 <> cedulaU7) Entonces
+                                                        Escribir "El usuario ", contador + 1,", con cédula #", cedulaU8, " se añadió exitosamente.";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    SiNo
+                                                        nombreU8<-"";
+                                                        cedulaU8<-0;
+                                                        pruebaU8<-0;
+                                                        Limpiar Pantalla;
+                                                        Escribir "El usuario ya había sido ingresaso";
+                                                        Escribir "Presione cualquier tecla para continuar";
+                                                        Esperar Tecla;
+                                                        agregarUsuario <- Verdadero;
+                                                    FinSi
+                                                SiNo
+                                                    nombreU8<-"";
+                                                    cedulaU8<-0;
+                                                    pruebaU8<-0;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Lo sentimos, faltaron campos por llenar";
+                                                    Escribir "Presione cualquier tecla para continuar";
+                                                    Esperar Tecla;
+                                                FinSi
+                                            FinSi
+                                        SiNo
+                                            Escribir "Lo sentimos, hemos alcanzado el número máximo de usuarios";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    2://Consultar usuarios
+                                        Escribir "USUARIOS ENCONTRADOS:";
+                                        Escribir "";
+                                        Si (usuarioExistente = Verdadero) Entonces
+                                            Si (usuario1 = Verdadero) Entonces
+                                                Escribir "Usuario #1 ", nombreU1, " con cédula #", cedulaU1;
+                                            FinSi
+                                            Si (usuario2 = Verdadero) Entonces
+                                                Escribir "Usuario #2 ", nombreU2, " con cédula #", cedulaU2;
+                                            FinSi
+                                            Si (usuario3 = Verdadero) Entonces
+                                                Escribir "Usuario #3 ", nombreU3, " con cédula #", cedulaU3;
+                                            FinSi
+                                            Si (usuario4 = Verdadero) Entonces
+                                                Escribir "Usuario #4 ", nombreU4, " con cédula #", cedulaU4;
+                                            FinSi
+                                            Si (usuario5 = Verdadero) Entonces
+                                                Escribir "Usuario #5 ", nombreU5, " con cédula #", cedulaU5;
+                                            FinSi
+                                            Si (usuario6 = Verdadero) Entonces
+                                                Escribir "Usuario #6 ", nombreU6, " con cédula #", cedulaU6;
+                                            FinSi
+                                            Si (usuario7 = Verdadero) Entonces
+                                                Escribir "Usuario #7 ", nombreU7, " con cédula #", cedulaU7;
+                                            FinSi
+                                            Si (usuario8 = Verdadero) Entonces
+                                                Escribir "Usuario #8 ", nombreU8, " con cédula #", cedulaU8;
+                                            FinSi
+                                            Escribir "";
+                                            Escribir "*******";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        SiNo
+                                            Limpiar Pantalla;
+                                            Escribir "";
+                                            Escribir "No se encontró ningún usuario.";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    3://Consultar resultados
+                                        Escribir "RESULTADOS:";
+                                        Escribir "";
+                                        Si (usuarioExistente = Verdadero) Entonces
+                                            Si (usuario1 = Verdadero) Entonces
+                                                Escribir "#1 ", nombreU1, " con cédula #", cedulaU1;
+                                                Si (pruebaU1 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Si (usuario2 = Verdadero) Entonces
+                                                Escribir "#2 ", nombreU2, " con cédula #", cedulaU2;
+                                                Si (pruebaU2 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Si (usuario3 = Verdadero) Entonces
+                                                Escribir "#3 ", nombreU3, " con cédula #", cedulaU3;
+                                                Si (pruebaU3 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Si (usuario4 = Verdadero) Entonces
+                                                Escribir "#4 ", nombreU4, " con cédula #", cedulaU4;
+                                                Si (pruebaU4 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Si (usuario5 = Verdadero) Entonces
+                                                Escribir "#5 ", nombreU5, " con cédula #", cedulaU5;
+                                                Si (pruebaU5 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Si (usuario6 = Verdadero) Entonces
+                                                Escribir "#6 ", nombreU6, " con cédula #", cedulaU6;
+                                                Si (pruebaU6 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Si (usuario7 = Verdadero) Entonces
+                                                Escribir "#7 ", nombreU7, " con cédula #", cedulaU7;
+                                                Si (pruebaU7 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Si (usuario8 = Verdadero) Entonces
+                                                Escribir "#8 ", nombreU8, " con cédula #", cedulaU8;
+                                                Si (pruebaU8 > 70) Entonces
+                                                    Escribir "***Usted ha aprobado la prueba";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "***Usted no ha aprobado la prueba";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSi
+                                            Escribir "";
+                                            Escribir "*******";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        SiNo
+                                            Limpiar Pantalla;
+                                            Escribir "";
+                                            Escribir "No se encontró ningún RESULTADO.";
+                                            Escribir "Presione cualquier tecla para continuar";
+                                            Esperar Tecla;
+                                        FinSi
+                                    De Otro Modo:
+                                        Escribir "Presione cualquier tecla para continuar";
+                                        Esperar Tecla;
+                                FinSegun
+                            Hasta Que opcion = 4
+                            Escribir "Salida exitosa";
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="youtubeVideo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y0d9zoAFWsE" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4 class="videoName">Video ejercicio 8</h4>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

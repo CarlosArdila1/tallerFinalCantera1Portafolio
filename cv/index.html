@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil_CV Carlos Ardila</title>
+        <link rel="stylesheet" href="CSS3/style.css">
+        <script src="JS/archivo.js"></script>
+    </head>
+    <body onload="main()">
+
+        <header>
+            <hgroup class="headerColor">
+                <h1>CARLOS ARDILA</h1>
+                <H2>Desarrollador</H2>
+            </hgroup>
+            <nav>
+                <div class="nav">
+                    <div>
+                        <figure>
+                            <img src="images/foto.jpg" alt="foto" id="foto">
+                        </figure>
+                    </div>
+                    <div class="links">
+                        <a href="../index.html" class="aLink" id="portfolio"><b>PORTAFOLIO</b></a>
+                        <a href="experiencia.html" class="aLink"><b>experiencia laboral</b></a><br>
+                        <a href="referenciasp.html" class="aLink"><b>referencias personales</b></a><br>
+                        <a href="referenciasf.html" class="aLink"><b>referencias familiares</b></a><br>
+                        <a href="estudios.html" class="aLink"><b>estudios realizados</b></a>
+                    </div> 
+                    <form>
+                        <select name="backgroungChanger" id="selection" class="changer" onchange="colorChanger()">
+                            <option value="">Default</option>
+                            <option value="#bbb">Clear</option>
+                            <option value="#9575cd">Deep purple</option>
+                            <option value="#aed581">Light green</option>
+                        </select>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <main class="mainColor">
+            <section>
+                <article>
+                    <section class="texto">
+                        <br>
+                        <h3>MI PERFIL</h3>
+                        <dd>
+                            Diseñador y desarrollador en busca de un trabajo a nivel de entrada o como Jr developer.
+                        </dd>
+                        <br>
+                        <dd>
+                            Soy una persona motivada y apasionada por el conocimiento y el aprendizaje continuo.
+                        </dd>
+                        <br>
+                        <dd>
+                            La experiencia como diseñador y freelance me han permitido crecer como trabajador y persona,<br>
+                            he adquirido conocimientos valiosos para el trabajo en equipo y al mismo tiempo, la autonomía.<br>
+                            Mi objetivo principal es pertenecer a un grupo de trabajo comprometido, estable e innovador.
+                        </dd>
+                    </section>
+                    <section id="info">
+                        <h3>INFORMACIÓN PERSONAL</h3>
+                        <div class="info">
+                            <P>
+                                <b>Nacimiento </b> 03/11/93<br>
+                                <b>Móvil </b> +57 321 606 3835<br>
+                                <b>E-mail </b> carlos.ardila@ucp.edu.co<br>
+                                <b>Dirección </b> Kr 80 #57-30<br>
+                                Medellín. Colombia
+                            </P>
+                        </div>
+                    </section>
+                </article>
+            </section>
+
+            <aside>
+                <div class="contenedor">
+                    <div class="cuadro">
+                        <h4 class="box">HABILIDADES</h4>
+                        <ul type="circle">
+                            <li>Git</li>
+                            <li>Resolución de problemas</li>
+                            <li>Photoshop</li>
+                            <li>Orientación al detalle</li>
+                            <li>Sketchup y V-ray</li>
+                            <li>Pensamiento creativo</li>
+                            <li>Trabajo en equipo</li>
+                            <li>Gestión del tiempo</li>
+                        </ul>
+                    </div>
+                    <div class="cuadro">
+                        <h4 class="box">COMPETENCIAS</h4>
+                        <ul type="circle">
+                            <li>PSeint</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>ReactJS</li>
+                        </ul>
+                    </div>
+                    <div class="cuadro">
+                        <h4 class="box">IDIOMAS</h4>
+                        <ul type="circle">
+                            <li>Español</li>
+                            <li>Inglés</li>
+                            <li>Italiano</li>
+                            <li>Japonés</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </aside>
+        </main>
+
+        <footer class="footerColor">
+            <a href="downloads/carlosArdilaCV.pdf" target="_blank" class="descarga"><b>Descargar CV</b></a>
+            <figure>
+                <img src="images/sello.png" alt="sello" id="sello">
+            </figure>
+            <p class="copyright">Copyright © 2022 Carlos Ardila</p>
+        </footer>
+
+    </body>
+</html>

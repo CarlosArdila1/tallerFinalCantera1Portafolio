@@ -1,0 +1,173 @@
+html {
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #eceff1;
+}
+
+main {
+    background-color: #90a4ae;
+}
+
+footer {
+    background-color: #37474f;
+    text-align: center;
+    padding: 10px 40px;
+    color: #fff;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.texto {
+    text-align: center;
+}
+
+hgroup {
+    background-color: #607d8b;
+    text-align: center;
+    padding: 10px 0px;
+    color: #fff;
+}
+nav {
+    background-color: #455a64;
+    text-align: center;
+}
+
+.nav {
+    display: inline-flex;
+    align-items: center;
+    height: 130px;
+}
+
+.changer{
+    width: 20px;
+    height: 30px;
+    margin: 0 -60px 90px 20px;
+    border: 2px solid #ff80ab;
+    border-radius: 25%;
+    background-color: #fff;
+}
+
+#foto {
+    width: 125px;
+    margin-left: -40px;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 10px 0px;
+    box-shadow: 0 3px 9px #ff80ab;
+}
+
+.links {
+    margin-left: 500px;
+    margin-top: 30px;
+}
+
+#portfolio {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.aLink {
+    display: block;
+    width: 160px;
+    background-color: #37474f;
+    text-decoration: none;
+    color: #cfd8dc;
+    text-align: left;
+    padding: 3px;
+    border: 1px solid #ff80ab;
+    border-radius: 0px 0px 10px 0px;
+    margin: -3px;
+}
+
+.links :hover {
+    height: 25px;
+    background-color: #ff80ab;
+    color: #000;
+}
+
+.links :active {
+    height: 35px;
+    background-color: #ff4081;
+    color: #fff;
+    cursor: wait;
+}
+
+#info {
+    text-align: center;
+}
+
+.info {
+    text-align: left;
+    margin-left: 400px;
+}
+
+h3, h4 {
+    color: #fff;
+    text-align: center;
+}
+
+.contenedor{
+    display: inline-flex;
+    margin: 20px;
+    color: #cfd8dc;
+}
+
+.box {
+    background-color: #78909c;
+    padding: 12px;
+    margin-top: 0%;
+}
+
+.cuadro {
+    width: 215px;
+    background-color: #455a64;
+    margin-left: 80px;
+}
+
+.descarga {
+    display: block;
+    width: 80px;
+    text-decoration: none;
+    color: #cfd8dc;
+    text-align: center;
+    float: right;
+    border: 2px solid #ff80ab;
+    margin: 35px 35px;
+}
+
+.descarga:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #37474f;
+}
+
+#sello {
+    width: 50px;
+    float: left;
+    margin: 15px -5px;
+}
+
+.tituloInterno {
+    color: #0f0f0f;
+    padding-top: 15px;
+    margin-top: 0;
+}
+
+.desplegable {
+    width: 30px;
+    height: 27px;
+    text-decoration: none;
+    border-radius: 25%;
+    border: 1px solid #ff80ab;
+}
+
+.desplegable:hover {
+    background-color: #ff80ab;
+    width: 35px;
+}
+
+.flecha {
+    text-decoration: none;
+    color: #0f0f0f;
+    font-size: 20px;
+    text-align: center;
+}

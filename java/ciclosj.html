@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Ciclos</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Ciclos en Java</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="java.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="containerCards">
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Realizar la siguiente figura por medio del ciclo Para</p>
+                    <img src="../images/ciclos1.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        public class Ejercicio1T3 {
+                            
+                            private int i, j;
+
+                            public void Ejercicio1T3() {
+                                
+                                for (int i = 1; i <= 10; i++) {
+                                    for (int j = 1; j <= i; j++) {
+                                        System.out.print("*");
+                                    }
+                                    System.out.println(" ");
+                                }
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Realizar la siguiente figura por medio del ciclo Mientras - Hacer</p>
+                    <img src="../images/ciclos2.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        public class Ejercicio2T3 {
+                            private int i, j, k, control;
+                            
+                            public void Ejercicio2T3() {
+                                control = 1;
+                                
+                                while (control == 1) {
+                                    
+                                    for (int i = 10; i >= 1; i--) {
+
+                                        for (int j = 9; j >= (10 - i + 1); j--) {
+                                            System.out.print(" ");
+                                        }
+
+                                        for (int k = 10; k >= i; k--) {
+                                            System.out.print("*");
+                                        }
+                                        
+                                        System.out.println(" ");
+                                    }
+                                    control = 2;
+                                }
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p>
+                    <img src="../images/ciclos3.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        public class Ejercicio3T3 {
+                            private int j, k, control;
+                            private double i;
+                            
+                            public void Ejercicio3T3() {
+                                control = 1;
+                                
+                                System.out.println("             *             ");
+                                
+                                do {
+                                    for (int i = 10; i >= 1; i--) {
+                                        
+                                        for (int k = -1; k <= i; k++) {
+                                            System.out.print(" ");
+                                        }
+                                        
+                                        for (int j = i; j <= 10; j++) {
+                                            System.out.print("*");
+                                        }
+                                        
+                                        for (int j = i; j <= (11); j++) {
+                                            System.out.print("*");
+                                        }
+                                        System.out.println(" ");
+                                    }
+                                    
+                                    System.out.println("            ***            ");
+                                    
+                                    for (int i = 10; i >= (8); i--) {
+                                        for (int k = -1; k <= i; k++) {
+                                            System.out.print(" ");
+                                        }
+                                        
+                                        for (int j = i; j <= 10; j++) {
+                                            System.out.print("*");
+                                        }
+                                        
+                                        for (int j = i; j <= (11); j++) {
+                                            System.out.print("*");
+                                        }
+                                        System.out.println(" ");
+                                    }
+                                    
+                                } while (control != 1);
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; 
+                        esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</p>
+                        <img src="../images/ciclos4.png" alt="" height="150" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio4T3 {
+                            private int n, i, res;
+                            private Scanner input;
+                            
+                            public void Ejercicio4T3() {
+                                input = new Scanner (System.in);
+                                
+                                System.out.println("**Tablas de multiplicar");
+                                
+                                askN();
+                                n = captureDataInt();
+                                
+                                for (int i = 1; i <= 10; i++) {
+                                    res = (i * n);
+                                    System.out.println(i + "*" + n + "=" + res);
+                                }
+                            }
+                            
+                            private void askN() {System.out.println("Indique número para crear tabla de multiplicar");}
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</p>
+                    <img src="../images/ciclos5.png" alt="" height="60" class="d-inline-block align-text-top"><br><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        import java.io.IOException;
+                        import java.util.Scanner;
+
+                        public class Ejercicio5T3 {
+                            private String name = "usuario";
+                            private int option;
+                            private Scanner input;
+                            
+                            public void Ejercicio5T3() throws IOException {
+                                input = new Scanner (System.in);
+                                
+                                do {
+                                    menu();
+                                    switch (option) {
+                                    case 1:
+                                        askName();
+                                        name = captureDataString();
+                                        break;
+                                        
+                                    case 2:
+                                        System.out.println("Hola " + name);
+                                        break;
+                                        
+                                    case 3:
+                                        break;
+
+                                    default:
+                                        System.out.println("Opción inválida");
+                                        break;
+                                    }
+                                    System.out.println("Presione 'enter' para continuar");
+                                    System.in.read();
+                                } while (option != 3);
+                            System.out.println("Vuelva pronto");
+                            }
+                            
+
+                            public void menu() {
+                                System.out.println("1. Capturar nombre");
+                                System.out.println("2. Saludar persona");
+                                System.out.println("3. Salir del sistema");
+                                option = captureOption();
+                            }
+                            
+                            private void askName() {System.out.println("Ingrese su nombre");}
+                            
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 6</h4>
+                    <p>Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. 
+                        Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos 
+                        verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el 
+                        sistema debe terminar cuando el usuario así lo indique.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        import java.io.IOException;
+                        import java.util.Scanner;
+
+                        public class Ejercicio6T3 {
+
+                            private String nameC1 = "", nameC2 = "", nameC3 = "", companyC1 = "", companyC2 = "", companyC3 = "";
+                            private int numberC1 = 0, numberC2 = 0, numberC3 = 0, counter, option;
+                            private boolean contact1 = false, contact2 = false, contact3 = false, addContact = false, existingContact;
+                            private Scanner input;
+                            
+                            public void Ejercicio6T3() throws IOException {
+                                input = new Scanner (System.in);
+                                
+                                do {
+                                    existingContact = false;
+                                    counter = 0;
+                                    menu();
+                                    
+                                    if (option == 1 || option == 2 || option == 3) {
+                                        if (!nameC1.equals("") & numberC1 > 0 & !companyC1.equals("")) {
+                                            existingContact = true;
+                                            contact1 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameC2.equals("") & numberC2 > 0 & !companyC2.equals("")) {
+                                            existingContact = true;
+                                            contact2 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameC3.equals("") & numberC3 > 0 & !companyC3.equals("")) {
+                                            existingContact = true;
+                                            contact3 = true;
+                                            counter = counter + 1;
+                                        }
+                                    }
+                                    
+                                    switch (option) {
+                                    case 1: //Agregar contactos
+                                        if (counter < 3) {
+                                            addContact = false;
+                                            System.out.println("AÑADIR CONTACTO:");
+                                            System.out.println("");
+                                            //Agregar contacto 1
+                                            if (!contact1 && !addContact) {
+                                                askName();
+                                                nameC1 = captureDataString();
+                                                
+                                                askCompany();
+                                                companyC1 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC1 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC1.equals("") & numberC1 > 0 & !companyC1.equals("")) {
+                                                    if (numberC1 != numberC2 && numberC1 != numberC3) {
+                                                        System.out.println("El contacto #" + (counter + 1) + ": *** " + nameC1 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addContact = true;
+                                                    } else {
+                                                        nameC1 = "";
+                                                        numberC1 = 0;
+                                                        companyC1 = "";
+                                                        existing();
+                                                        addContact = true;
+                                                    }
+                                                } else {
+                                                    nameC1 = "";
+                                                    numberC1 = 0;
+                                                    companyC1 = "";
+                                                    missingFields();
+                                                }
+                                            }
+                                            //Agregar contacto 2
+                                            if (!contact2 && !addContact) {
+                                                askName();
+                                                nameC2 = captureDataString();
+                                                
+                                                askCompany();
+                                                companyC2 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC2 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC2.equals("") & numberC2 > 0 & !companyC2.equals("")) {
+                                                    if (numberC2 != numberC1 && numberC2 != numberC3) {
+                                                        System.out.println("El contacto #" + (counter + 1) + ": *** " + nameC2 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addContact = true;
+                                                    } else {
+                                                        nameC2 = "";
+                                                        numberC2 = 0;
+                                                        companyC2 = "";
+                                                        existing();
+                                                        addContact = true;
+                                                    }
+                                                } else {
+                                                    nameC2 = "";
+                                                    numberC2 = 0;
+                                                    companyC2 = "";
+                                                    missingFields();
+                                                }
+                                            }
+                                            //Agregar contacto 3
+                                            if (!contact3 && !addContact) {
+                                                askName();
+                                                nameC3 = captureDataString();
+                                                
+                                                askCompany();
+                                                companyC3 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC3 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC3.equals("") & numberC3 > 0 & !companyC3.equals("")) {
+                                                    if (numberC3 != numberC1 && numberC3 != numberC2) {
+                                                        System.out.println("El contacto #" + (counter + 1) + ": *** " + nameC3 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addContact = true;
+                                                    } else {
+                                                        nameC3 = "";
+                                                        numberC3 = 0;
+                                                        companyC3 = "";
+                                                        existing();
+                                                        addContact = true;
+                                                    }
+                                                } else {
+                                                    nameC3 = "";
+                                                    numberC3 = 0;
+                                                    companyC3 = "";
+                                                    missingFields();
+                                                }
+                                            }
+                                
+                                        } else {
+                                            System.out.println("Lo sentimos, has alcanzado el número de contactos máximos permitidos");
+                                            enterContinue();
+                                        }
+                                        break;
+
+                                    case 2: //Buscar contactos
+                                        System.out.println("CONTACTOS ENCONTRADOS:");
+                                        System.out.println("");
+                                        if (existingContact = true) {
+                                            if (contact1 = true) {
+                                                contact();
+                                                System.out.println("Nombre:       " + nameC1);
+                                                System.out.println("Número:       " + numberC1);
+                                                System.out.println("Organización: " + companyC1);
+                                            }
+                                            if (contact2 = true) {
+                                                contact();
+                                                System.out.println("Nombre:       " + nameC2);
+                                                System.out.println("Número:       " + numberC2);
+                                                System.out.println("Organización: " + companyC2);
+                                            }
+                                            if (contact3 = true) {
+                                                contact();
+                                                System.out.println("Nombre:       " + nameC3);
+                                                System.out.println("Número:       " + numberC3);
+                                                System.out.println("Organización: " + companyC3);
+                                            }
+                                            System.out.println("");
+                                            System.out.println("*******");
+                                            enterContinue();
+                                        } else {
+                                            System.out.println("");
+                                            System.out.println("No se encontró ningún contacto existente.");
+                                            enterContinue();
+                                        }
+                                        break;
+                                        
+                                    case 3: //Eliminar contactos
+                                        if (existingContact = true) {
+                                            if (contact1 = true) {
+                                                System.out.println("1. " + nameC1);
+                                            }
+                                            if (contact2 = true) {
+                                                System.out.println("2. " + nameC2);
+                                            }
+                                            if (contact3 = true) {
+                                                System.out.println("3. " + nameC3);
+                                            }
+                                            System.out.println("");
+                                            System.out.println("Número de contacto a eliminar: ");
+                                            option = captureOption();
+                                            switch (option) {
+                                            case 1:
+                                                contact1 = false;
+                                                nameC1 = "";
+                                                numberC1 = 0;
+                                                companyC1 = "";
+                                                System.out.println("Eliminación exitosa");
+                                                break;
+                                                
+                                            case 2:
+                                                contact2 = false;
+                                                nameC2 = "";
+                                                numberC2 = 0;
+                                                companyC2 = "";
+                                                System.out.println("Eliminación exitosa");
+                                                break;
+                                                
+                                            case 3:
+                                                contact2 = false;
+                                                nameC3 = "";
+                                                numberC3 = 0;
+                                                companyC3 = "";
+                                                System.out.println("Eliminación exitosa");
+                                                break;
+                                                
+                                            default:
+                                                System.out.println("Contacto inexistente");
+                                                enterContinue();
+                                                break;
+                                            }
+                                            enterContinue();
+                                        } else {
+                                            System.out.println("");
+                                            System.out.println("No se encontró ningún contacto existente.");
+                                            enterContinue();
+                                        }
+                                        break;
+                                        
+                                    default:
+                                        enterContinue();
+                                        break;
+                                    }
+                                } while (option != 4);
+                                System.out.println("Salida exitosa");
+                            }
+                            
+                            
+                            private void menu() {
+                                System.out.println("*****TELÉFONO*****");
+                                System.out.println("**Menú de ususario");
+                                System.out.println("");
+                                System.out.println("1. Añadir contacto");
+                                System.out.println("2. Buscar contacto");
+                                System.out.println("3. Eliminar contacto");
+                                System.out.println("4. Salir");
+                                option = captureOption();
+                            }
+                            
+                            private void existing() throws IOException {
+                                System.out.println("El contacto ya existía");
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void missingFields() throws IOException {
+                                System.out.println("Lo sentimos, faltaron campos por diligenciar");
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void contact() {
+                                System.out.println("");
+                                System.out.println("CONTACTO");
+                                System.out.println("");
+                            }
+                            
+                            private void enterContinue() throws IOException {
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private void askName() {System.out.println("Nombre del contacto: ");}
+                            private void askCompany() {System.out.println("Organización: ");}
+                            private void askNumber() {System.out.println("Teléfono: ");}
+
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 7</h4>
+                    <p>El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar 
+                        los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, 
+                        y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, 
+                        retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
+                        Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        import java.io.IOException;
+                        import java.util.Scanner;
+
+                        public class Ejercicio7T3 {
+
+                            
+                            private String plateC1 = "", plateC2 = "", plateC3 = "", plateC4 = "", plateC5 = "";
+                            private String nameC1 = "", nameC2 = "", nameC3 = "", nameC4 = "", nameC5 = "", brandC1 = "", brandC2 = "", brandC3 = "", brandC4 = "", brandC5 = "";
+                            private int option, counter, numberC1 = 0, numberC2 = 0, numberC3 = 0, numberC4 = 0, numberC5 = 0;
+                            private boolean client1 = false, client2 = false, client3 = false, client4 = false, client5 = false, addClient = false, existingClient;
+                            private Scanner input;
+                            
+                            public void Ejercicio7T3() throws IOException {
+                                input = new Scanner (System.in);
+                                
+                                do {
+                                    existingClient = false;
+                                    counter = 0;
+                                    menu();
+                                    
+                                    if (option == 1 || option == 2 || option == 3) {
+                                        
+                                        if (!nameC1.equals("") & numberC1 > 0 & !brandC1.equals("") & !plateC1.equals("")) {
+                                            existingClient = true;
+                                            client1 = true;
+                                            counter = counter +1;
+                                        }
+                                        if (!nameC2.equals("") & numberC2 > 0 & !brandC2.equals("") & !plateC2.equals("")) {
+                                            existingClient = true;
+                                            client2 = true;
+                                            counter = counter +1;
+                                        }
+                                        if (!nameC3.equals("") & numberC3 > 0 & !brandC3.equals("") & !plateC3.equals("")) {
+                                            existingClient = true;
+                                            client3 = true;
+                                            counter = counter +1;
+                                        }
+                                        if (!nameC4.equals("") & numberC4 > 0 & !brandC4.equals("") & !plateC4.equals("")) {
+                                            existingClient = true;
+                                            client4 = true;
+                                            counter = counter +1;
+                                        }
+                                        if (!nameC5.equals("") & numberC5 > 0 & !brandC5.equals("") & !plateC5.equals("")) {
+                                            existingClient = true;
+                                            client5 = true;
+                                            counter = counter +1;
+                                        }
+                                    }
+                                    
+                                    switch (option) {
+                                    case 1://Ingresar vehículos
+                                        if (counter < 5) {
+                                            addClient = false;
+                                            System.out.println("INGRESAR VEHÍCULO");
+                                            System.out.println("");
+                                            //Agregar vehículo 1
+                                            if (!client1 && !addClient) {
+                                                askName();
+                                                nameC1 = captureDataString();
+                                                
+                                                askBrand();
+                                                brandC1 = captureDataString();
+                                                
+                                                askPlate();
+                                                plateC1 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC1 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC1.equals("") & numberC1 > 0 & !brandC1.equals("") & !plateC1.equals("")) {
+                                                    if (plateC1 != plateC2 && plateC1 != plateC3 && plateC1 != plateC4 && plateC1 != plateC5) {
+                                                        System.out.println("El vehículo #" + (counter + 1) + ", con placa número " + plateC1 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addClient = true;
+                                                    } else {
+                                                        nameC1 = "";
+                                                        brandC1 = "";
+                                                        plateC1 = "";
+                                                        numberC1 = 0;
+                                                        enter();
+                                                        addClient = true;
+                                                    }
+                                                } else {
+                                                    nameC1 = "";
+                                                    brandC1 = "";
+                                                    plateC1 = "";
+                                                    numberC1 = 0;
+                                                    missingFields();
+                                                }
+                                            }
+                                            
+                                            //Agregar vehículo 2
+                                            if (!client2 && !addClient) {
+                                                askName();
+                                                nameC2 = captureDataString();
+                                                
+                                                askBrand();
+                                                brandC2 = captureDataString();
+                                                
+                                                askPlate();
+                                                plateC2 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC2 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC2.equals("") & numberC2 > 0 & !brandC2.equals("") & !plateC2.equals("")) {
+                                                    if (plateC2 != plateC1 && plateC2 != plateC3 && plateC2 != plateC4 && plateC2 != plateC5) {
+                                                        System.out.println("El vehículo #" + (counter + 1) + ", con placa número " + plateC2 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addClient = true;
+                                                    } else {
+                                                        nameC2 = "";
+                                                        brandC2 = "";
+                                                        plateC2 = "";
+                                                        numberC2 = 0;
+                                                        enter();
+                                                        addClient = true;
+                                                    }
+                                                } else {
+                                                    nameC2 = "";
+                                                    brandC2 = "";
+                                                    plateC2 = "";
+                                                    numberC2 = 0;
+                                                    missingFields();
+                                                }
+                                            }
+                                            
+                                            //Agregar vehículo 3
+                                            if (!client3 && !addClient) {
+                                                askName();
+                                                nameC3 = captureDataString();
+                                                
+                                                askBrand();
+                                                brandC3 = captureDataString();
+                                                
+                                                askPlate();
+                                                plateC3 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC3 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC3.equals("") & numberC3 > 0 & !brandC3.equals("") & !plateC3.equals("")) {
+                                                    if (plateC3 != plateC1 && plateC3 != plateC2 && plateC3 != plateC4 && plateC3 != plateC5) {
+                                                        System.out.println("El vehículo #" + (counter + 1) + ", con placa número " + plateC3 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addClient = true;
+                                                    } else {
+                                                        nameC3 = "";
+                                                        brandC3 = "";
+                                                        plateC3 = "";
+                                                        numberC3 = 0;
+                                                        enter();
+                                                        addClient = true;
+                                                    }
+                                                } else {
+                                                    nameC3 = "";
+                                                    brandC3 = "";
+                                                    plateC3 = "";
+                                                    numberC3 = 0;
+                                                    missingFields();
+                                                }
+                                            }
+                                            
+                                            //Agregar vehículo 4
+                                            if (!client4 && !addClient) {
+                                                askName();
+                                                nameC4 = captureDataString();
+                                                
+                                                askBrand();
+                                                brandC4 = captureDataString();
+                                                
+                                                askPlate();
+                                                plateC4 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC4 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC4.equals("") & numberC4 > 0 & !brandC4.equals("") & !plateC4.equals("")) {
+                                                    if (plateC4 != plateC1 && plateC4 != plateC2 && plateC4 != plateC3 && plateC4 != plateC5) {
+                                                        System.out.println("El vehículo #" + (counter + 1) + ", con placa número " + plateC4 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addClient = true;
+                                                    } else {
+                                                        nameC4 = "";
+                                                        brandC4 = "";
+                                                        plateC4 = "";
+                                                        numberC4 = 0;
+                                                        enter();
+                                                        addClient = true;
+                                                    }
+                                                } else {
+                                                    nameC4 = "";
+                                                    brandC4 = "";
+                                                    plateC4 = "";
+                                                    numberC4 = 0;
+                                                    missingFields();
+                                                }
+                                            }
+                                            
+                                            //Agregar vehículo 5
+                                            if (!client5 && !addClient) {
+                                                askName();
+                                                nameC5 = captureDataString();
+                                                
+                                                askBrand();
+                                                brandC5 = captureDataString();
+                                                
+                                                askPlate();
+                                                plateC5 = captureDataString();
+                                                
+                                                askNumber();
+                                                numberC5 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameC5.equals("") & numberC5 > 0 & !brandC5.equals("") & !plateC5.equals("")) {
+                                                    if (plateC5 != plateC1 && plateC5 != plateC2 && plateC5 != plateC3 && plateC5 != plateC4) {
+                                                        System.out.println("El vehículo #" + (counter + 1) + ", con placa número " + plateC5 + "*** se añadió exitosamente.");
+                                                        enterContinue();
+                                                        addClient = true;
+                                                    } else {
+                                                        nameC5 = "";
+                                                        brandC5 = "";
+                                                        plateC5 = "";
+                                                        numberC5 = 0;
+                                                        enter();
+                                                        addClient = true;
+                                                    }
+                                                } else {
+                                                    nameC5 = "";
+                                                    brandC5 = "";
+                                                    plateC5 = "";
+                                                    numberC5 = 0;
+                                                    missingFields();
+                                                }
+                                            }
+                            
+                                        } else {
+                                            System.out.println("Lo sentimos, hemos alcanzado el número de vehículos máximos permitidos");
+                                            enterContinue();
+                                        }
+                                        break;
+                                        
+                                    case 2://Consultar vehículos
+                                        System.out.println("VEHÍCULOS ENCONTRADOS:");
+                                        System.out.println("");
+                                        if (existingClient == true) {
+                                            if (client1 == true) {
+                                                client();
+                                                System.out.println("Nombre:            " + nameC1);
+                                                System.out.println("Marca:             " + brandC1);
+                                                System.out.println("Placa:             " + plateC1);
+                                                System.out.println("Número telefónico: " + numberC1);
+                                            }
+                                            if (client2 == true) {
+                                                client();
+                                                System.out.println("Nombre:            " + nameC2);
+                                                System.out.println("Marca:             " + brandC2);
+                                                System.out.println("Placa:             " + plateC2);
+                                                System.out.println("Número telefónico: " + numberC2);
+                                            }
+                                            if (client3 == true) {
+                                                client();
+                                                System.out.println("Nombre:            " + nameC3);
+                                                System.out.println("Marca:             " + brandC3);
+                                                System.out.println("Placa:             " + plateC3);
+                                                System.out.println("Número telefónico: " + numberC3);
+                                            }
+                                            if (client4 == true) {
+                                                client();
+                                                System.out.println("Nombre:            " + nameC4);
+                                                System.out.println("Marca:             " + brandC4);
+                                                System.out.println("Placa:             " + plateC4);
+                                                System.out.println("Número telefónico: " + numberC4);
+                                            }
+                                            if (client5 == true) {
+                                                client();
+                                                System.out.println("Nombre:            " + nameC5);
+                                                System.out.println("Marca:             " + brandC5);
+                                                System.out.println("Placa:             " + plateC5);
+                                                System.out.println("Número telefónico: " + numberC5);
+                                            }
+                                            System.out.println("");
+                                            System.out.println("*******");
+                                            enterContinue();
+                                        } else {
+                                            System.out.println("");
+                                            System.out.println("No se encontró ningún vehículo existente.");
+                                            enterContinue();
+                                        }
+                                        break;
+                                        
+                                    case 3://Retirar vehículo
+                                        if (existingClient == true) {
+                                            
+                                            if (client1 == true) {
+                                                System.out.println("1. " + plateC1);
+                                            }
+                                            if (client2 == true) {
+                                                System.out.println("2. " + plateC2);
+                                            }
+                                            if (client3 == true) {
+                                                System.out.println("3. " + plateC3);
+                                            }
+                                            if (client4 == true) {
+                                                System.out.println("4. " + plateC4);
+                                            }
+                                            if (client5 == true) {
+                                                System.out.println("5. " + plateC5);
+                                            }
+                                            System.out.println("");
+                                            System.out.println("Número de placa del vehículo a retirar: ");
+                                            option = captureOption();
+                                            
+                                            switch (option) {
+                                            case 1:
+                                                client1 = false;
+                                                nameC1 = "";
+                                                brandC1 = "";
+                                                plateC1 = "";
+                                                numberC1 = 0;
+                                                System.out.println("Retiro exitoso, por favor diríjase a la taquilla");
+                                                break;
+                                        
+                                            case 2:
+                                                client2 = false;
+                                                nameC2 = "";
+                                                brandC2 = "";
+                                                plateC2 = "";
+                                                numberC2 = 0;
+                                                System.out.println("Retiro exitoso, por favor diríjase a la taquilla");
+                                                break;
+                                                
+                                            case 3:
+                                                client3 = false;
+                                                nameC3 = "";
+                                                brandC3 = "";
+                                                plateC3 = "";
+                                                numberC3 = 0;
+                                                System.out.println("Retiro exitoso, por favor diríjase a la taquilla");
+                                                break;
+                                                
+                                            case 4:
+                                                client4 = false;
+                                                nameC4 = "";
+                                                brandC4 = "";
+                                                plateC4 = "";
+                                                numberC4 = 0;
+                                                System.out.println("Retiro exitoso, por favor diríjase a la taquilla");
+                                                break;
+                                            
+                                            case 5:
+                                                client5 = false;
+                                                nameC5 = "";
+                                                brandC5 = "";
+                                                plateC5 = "";
+                                                numberC5 = 0;
+                                                System.out.println("Retiro exitoso, por favor diríjase a la taquilla");
+                                                break;
+                            
+                                            default:
+                                                System.out.println("Vehículo inexistente");
+                                                enterContinue();
+                                                break;
+                                            }
+                                            enterContinue();
+
+                                        } else {
+                                            System.out.println("");
+                                            System.out.println("No se encontró ningún vehículo.");
+                                            enterContinue();
+                                        }
+                                        break;
+
+                                    default:
+                                        enterContinue();
+                                        break;
+                                    }
+                                } while (option != 4);
+                                System.out.println("Salida exitosa");
+                            }
+                            
+                            
+                            private void menu() {
+                                System.out.println("*PARQUEADERO EL GUARDIÁN*");
+                                System.out.println("**Menú de ususario");
+                                System.out.println("");
+                                System.out.println("1. Ingresar vehículo");
+                                System.out.println("2. Consultar vehículos");
+                                System.out.println("3. Retirar vehículo");
+                                System.out.println("4. Salir");
+                                option = captureOption();
+                            }
+                            
+                            private void enter() throws IOException {
+                                System.out.println("El vehículo ya había sido ingresaso");
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void missingFields() throws IOException {
+                                System.out.println("Lo sentimos, faltaron campos por diligenciar");
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void client() {
+                                System.out.println("");
+                                System.out.println("CLIENTE");
+                                System.out.println("");
+                            }
+                            
+                            private void enterContinue() throws IOException {
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void askName() {System.out.println("Nombre del cliente: ");}
+                            private void askBrand() {System.out.println("Marca del vehículo: ");}
+                            private void askPlate() {System.out.println("Placa del vehículo: ");}
+                            private void askNumber() {System.out.println("Teléfono: ");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                            
+                            private int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 8</h4>
+                    <p>La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer 
+                        quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, 
+                        consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar 
+                        cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller3;
+
+                        import java.io.IOException;
+                        import java.util.Scanner;
+
+                        public class Ejercicio8T3 {
+                            
+                            private boolean user1 = false, user2 = false, user3 = false, user4 = false, user5 = false, user6 = false, user7 = false, user8 = false, addUser = false, existingUser;
+                            private String nameU1 = "", nameU2 = "", nameU3 = "", nameU4 = "", nameU5 = "", nameU6 = "", nameU7 = "", nameU8 = "";
+                            private int option, counter, idU1 = 0, idU2 = 0, idU3 = 0, idU4 = 0, idU5 = 0, idU6 = 0, idU7 = 0, idU8 = 0;
+                            private int testU1 = 0, testU2 = 0, testU3 = 0, testU4 = 0, testU5 = 0, testU6 = 0, testU7 = 0, testU8 = 0;
+                            private Scanner input;
+                            
+                            public void Ejercicio8T3() throws IOException {
+                                input = new Scanner (System.in);
+                                
+                                do {
+                                    existingUser = false;
+                                    counter = 0;
+                                    menu();
+                                    
+                                    if (option == 1 || option == 2 || option == 3) {
+                                        if (!nameU1.equals("") & idU1 > 0 ) {
+                                            existingUser = true;
+                                            user1 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameU2.equals("") & idU2 > 0 ) {
+                                            existingUser = true;
+                                            user2 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameU3.equals("") & idU3 > 0 ) {
+                                            existingUser = true;
+                                            user3 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameU4.equals("") & idU4 > 0 ) {
+                                            existingUser = true;
+                                            user4 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameU5.equals("") & idU5 > 0 ) {
+                                            existingUser = true;
+                                            user5 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameU6.equals("") & idU6 > 0 ) {
+                                            existingUser = true;
+                                            user6 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameU7.equals("") & idU7 > 0 ) {
+                                            existingUser = true;
+                                            user7 = true;
+                                            counter = counter + 1;
+                                        }
+                                        if (!nameU8.equals("") & idU8 > 0 ) {
+                                            existingUser = true;
+                                            user8 = true;
+                                            counter = counter + 1;
+                                        }
+                                    }
+                                    
+                                    switch (option) {
+                                    case 1://Registrar usuarios
+                                        if (counter < 8) {
+                                            addUser = false;
+                                            System.out.println("INGRESAR USUARIO:");
+                                            System.out.println("");
+                                            //Registrar usuario 1
+                                            if (!user1 && !addUser) {
+                                                
+                                                askName();
+                                                nameU1 = captureDataString();
+                                                
+                                                askId();
+                                                idU1 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU1 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU1.equals("") & idU1 > 0 & testU1 > 0) {
+                                                    if (idU1 != idU2 && idU1 != idU3 && idU1 != idU4 && idU1 != idU5 && idU1 != idU6 && idU1 != idU7 && idU1 != idU8) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU1 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU1 = "";
+                                                        idU1 = 0;
+                                                        testU1 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU1 = "";
+                                                    idU1 = 0;
+                                                    testU1 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            //Registrar usuario 2
+                                            if (!user2 && !addUser) {
+                                                
+                                                askName();
+                                                nameU2 = captureDataString();
+                                                
+                                                askId();
+                                                idU2 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU2 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU2.equals("") & idU2 > 0 & testU2 > 0) {
+                                                    if (idU2 != idU1 && idU2 != idU3 && idU2 != idU4 && idU2 != idU5 && idU2 != idU6 && idU2 != idU7 && idU2 != idU8) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU2 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU2 = "";
+                                                        idU2 = 0;
+                                                        testU2 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU2 = "";
+                                                    idU2 = 0;
+                                                    testU2 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            //Registrar usuario 3
+                                            if (!user3 && !addUser) {
+                                                
+                                                askName();
+                                                nameU3 = captureDataString();
+                                                
+                                                askId();
+                                                idU3 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU3 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU3.equals("") & idU3 > 0 & testU3 > 0) {
+                                                    if (idU3 != idU1 && idU3 != idU2 && idU3 != idU4 && idU3 != idU5 && idU3 != idU6 && idU3 != idU7 && idU3 != idU8) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU3 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU3 = "";
+                                                        idU3 = 0;
+                                                        testU3 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU3 = "";
+                                                    idU3 = 0;
+                                                    testU3 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            //Registrar usuario 4
+                                            if (!user4 && !addUser) {
+                                                
+                                                askName();
+                                                nameU4 = captureDataString();
+                                                
+                                                askId();
+                                                idU4 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU4 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU4.equals("") & idU4 > 0 & testU4 > 0) {
+                                                    if (idU4 != idU1 && idU4 != idU2 && idU4 != idU3 && idU4 != idU5 && idU4 != idU6 && idU4 != idU7 && idU4 != idU8) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU4 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU4 = "";
+                                                        idU4 = 0;
+                                                        testU4 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU4 = "";
+                                                    idU4 = 0;
+                                                    testU4 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            //Registrar usuario 5
+                                            if (!user5 && !addUser) {
+                                                
+                                                askName();
+                                                nameU5 = captureDataString();
+                                                
+                                                askId();
+                                                idU5 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU5 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU5.equals("") & idU5 > 0 & testU5 > 0) {
+                                                    if (idU5 != idU1 && idU5 != idU2 && idU5 != idU3 && idU5 != idU4 && idU5 != idU6 && idU5 != idU7 && idU5 != idU8) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU5 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU5 = "";
+                                                        idU5 = 0;
+                                                        testU5 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU5 = "";
+                                                    idU5 = 0;
+                                                    testU5 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            //Registrar usuario 6
+                                            if (!user6 && !addUser) {
+                                                
+                                                askName();
+                                                nameU6 = captureDataString();
+                                                
+                                                askId();
+                                                idU6 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU6 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU6.equals("") & idU6 > 0 & testU6 > 0) {
+                                                    if (idU6 != idU1 && idU6 != idU2 && idU6 != idU3 && idU6 != idU4 && idU6 != idU5 && idU6 != idU7 && idU6 != idU8) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU6 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU6 = "";
+                                                        idU6 = 0;
+                                                        testU6 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU6 = "";
+                                                    idU6 = 0;
+                                                    testU6 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            //Registrar usuario 7
+                                            if (!user7 && !addUser) {
+                                                
+                                                askName();
+                                                nameU7 = captureDataString();
+                                                
+                                                askId();
+                                                idU7 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU7 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU7.equals("") & idU7 > 0 & testU7 > 0) {
+                                                    if (idU7 != idU1 && idU7 != idU2 && idU7 != idU3 && idU7 != idU4 && idU7 != idU5 && idU7 != idU6 && idU7 != idU8) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU7 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU7 = "";
+                                                        idU7 = 0;
+                                                        testU7 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU7 = "";
+                                                    idU7 = 0;
+                                                    testU7 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            //Registrar usuario 8
+                                            if (!user8 && !addUser) {
+                                                
+                                                askName();
+                                                nameU8 = captureDataString();
+                                                
+                                                askId();
+                                                idU8 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                askTest();
+                                                testU8 = captureDataInt();
+                                                input.nextLine();
+                                                
+                                                if (!nameU8.equals("") & idU8 > 0 & testU8 > 0) {
+                                                    if (idU8 != idU1 && idU8 != idU2 && idU8 != idU3 && idU8 != idU4 && idU8 != idU5 && idU8 != idU6 && idU8 != idU7) {
+                                                        System.out.println("El usuario " + (counter + 1) + ", con cédula #" + idU8 + "se añadió exitosamente");
+                                                        enterContinue();
+                                                        addUser = true;
+                                                    } else {
+                                                        nameU8 = "";
+                                                        idU8 = 0;
+                                                        testU8 = 0;
+                                                        alreadyEntered();
+                                                        addUser = true;
+                                                    }
+                                                } else {
+                                                    nameU8 = "";
+                                                    idU8 = 0;
+                                                    testU8 = 0;
+                                                    sorry();
+                                                }	
+                                            }
+                                            
+                                        } else {
+                                            System.out.println("Lo sentimos, hemos alcanzado el número máximo de usuarios");
+                                            enterContinue();
+                                        }
+                                        break;
+                                        
+                                    case 2://Consultar usuarios
+                                        System.out.println("USUARIOS ENCONTRADOS:");
+                                        System.out.println("");
+                                        if (existingUser == true) {
+                                            if (user1 == true) {
+                                                System.out.println("Usuario # 1 " + nameU1 + " con cédula #" + idU1);
+                                            }
+                                            if (user2 == true) {
+                                                System.out.println("Usuario # 2 " + nameU2 + " con cédula #" + idU2);
+                                            }
+                                            if (user3 == true) {
+                                                System.out.println("Usuario # 3 " + nameU3 + " con cédula #" + idU3);
+                                            }
+                                            if (user4 == true) {
+                                                System.out.println("Usuario # 4 " + nameU4 + " con cédula #" + idU4);
+                                            }
+                                            if (user5 == true) {
+                                                System.out.println("Usuario # 5 " + nameU5 + " con cédula #" + idU5);
+                                            }
+                                            if (user6 == true) {
+                                                System.out.println("Usuario # 6 " + nameU6 + " con cédula #" + idU6);
+                                            }
+                                            if (user7 == true) {
+                                                System.out.println("Usuario # 7 " + nameU7 + " con cédula #" + idU7);
+                                            }
+                                            if (user8 == true) {
+                                                System.out.println("Usuario # 8 " + nameU8 + " con cédula #" + idU8);
+                                            }
+                                            System.out.println("");
+                                            System.out.println("*******");
+                                            enterContinue();
+                                        } else {
+                                            System.out.println("");
+                                            System.out.println("No se encontró ningún usuario.");
+                                            enterContinue();
+                                        }
+                                        break;
+                                        
+                                    case 3://Consultar resultados
+                                        System.out.println("RESULTADOS:");
+                                        System.out.println("");
+                                        if (existingUser == true) {
+                                            if (user1 == true) {
+                                                System.out.println("# 1 " + nameU1 + " con cédula #" + idU1);
+                                                if (testU1 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            if (user2 == true) {
+                                                System.out.println("# 2 " + nameU2 + " con cédula #" + idU2);
+                                                if (testU2 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            if (user3 == true) {
+                                                System.out.println("# 3 " + nameU3 + " con cédula #" + idU3);
+                                                if (testU3 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            if (user4 == true) {
+                                                System.out.println("# 4 " + nameU4 + " con cédula #" + idU4);
+                                                if (testU4 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            if (user5 == true) {
+                                                System.out.println("# 5 " + nameU5 + " con cédula #" + idU5);
+                                                if (testU5 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            if (user6 == true) {
+                                                System.out.println("# 6 " + nameU6 + " con cédula #" + idU6);
+                                                if (testU6 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            if (user7 == true) {
+                                                System.out.println("# 7 " + nameU7 + " con cédula #" + idU7);
+                                                if (testU7 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            if (user8 == true) {
+                                                System.out.println("# 8 " + nameU8 + " con cédula #" + idU8);
+                                                if (testU8 > 70) {
+                                                    approved();
+                                                } else {
+                                                    notApproved();
+                                                }
+                                            }
+                                            System.out.println("");
+                                            System.out.println("*******");
+                                            enterContinue();
+                                        } else {
+                                            System.out.println("");
+                                            System.out.println("No se encontró ningún resultado.");
+                                            enterContinue();
+                                        }
+                                        break;
+
+                                    default:
+                                        enterContinue();
+                                        break;
+                                    }		
+                                } while (option != 4);
+                                System.out.println("Salida exitosa");
+                            }
+                            
+                            
+                            private void menu() {
+                                System.out.println("***Escuela automovilística El Maestro***");
+                                System.out.println("**Menú de ususario");
+                                System.out.println("");
+                                System.out.println("1. Registrar usuario");
+                                System.out.println("2. Consultar usuarios");
+                                System.out.println("3. Consultar resultados");
+                                System.out.println("4. Salir");
+                                option = captureOption();
+                            }
+                            
+                            private void sorry() throws IOException {
+                                System.out.println("Lo sentimos, faltaron campos por llenar");
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void notApproved() {
+                                System.out.println("***Usted no ha aprobado la prueba");
+                                System.out.println("");
+                            }
+                            
+                            private void approved() {
+                                System.out.println("***Usted ha aprobado la prueba");
+                                System.out.println("");
+                            }
+                            
+                            private void alreadyEntered() throws IOException {
+                                System.out.println("El usuario ya había sido ingresado");
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void enterContinue() throws IOException {
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private void askName() {System.out.println("Nombre del usuario: ");}
+                            private void askId() {System.out.println("Cédula:");}
+                            private void askTest() {System.out.println("Ingrese resultado de la prueba (1 - 100):");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                            
+                            private int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

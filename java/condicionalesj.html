@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Condicionales</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Condicionales en Java</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="java.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="containerCards">
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio1T2 {
+                            
+                            private int old;
+                            private Scanner input;
+                            
+                            public void Ejercicio1T2() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askOld();
+                                old = captureDataInt();
+                                
+                                if (old >= 18) {
+                                    System.out.println("Usted es mayor de edad");
+                                }
+                            }
+                            
+                            private void askOld() {System.out.println("¿Cuántos años tienes?");}
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio2T2 {
+
+                            private int old;
+                            private Scanner input;
+                            
+                            public void Ejercicio2T2() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askOld();
+                                old = captureDataInt();
+                                
+                                if (old < 18) {
+                                    System.out.println("Usted es un niño(a)");
+                                }
+                                
+                            }
+                            
+                            private void askOld() {System.out.println("¿Cuántos años tienes?");}
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();}
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonces se deberá imprimir en pantalla 
+                        [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, 
+                        deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio3T2 {
+
+                            private String name;
+                            private String surname;
+                            private int old;
+                            private Scanner input;
+                            
+                            public void Ejercicio3T2() {
+                                
+                                input = new Scanner (System.in);
+                                
+                                askName();
+                                name = captureDataString();
+                                
+                                askSurname();
+                                surname = captureDataString();
+                                
+                                askOld();
+                                old = captureDataInt();
+                                
+                                if (old >= 18) {
+                                    System.out.println(name + " " + surname + ", usted es mayor de edad, por lo tanto puede entrar a la fiesta");
+                                } else {
+                                    System.out.println(name + " " + surname + ", usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuélvase a su casa.");
+                                }
+                                
+                            }
+                            
+                            private void askName() {System.out.println("¿Cuál es tu nombre?");}
+                            private void askSurname() {System.out.println("¿Cuáles son tus apellidos?");}
+                            private void askOld() {System.out.println("¿Qué edad tienes?");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler 
+                        de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película 
+                        en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio4T2 {
+
+                            private String name, address, novelty;
+                            private int phone, option;
+                            private Scanner input;
+                            
+                            public void Ejercicio4T2() {
+                                
+                                input = new Scanner (System.in);
+                                menu();
+                                
+                                switch (option) {
+                                case 1:
+                                    movies();
+                                    break;
+                                case 2:
+                                    movies();
+                                    option = captureOption();
+                                    if (option > 0 && option <= 7) {
+                                        System.out.println("Por favor complete los siguientes datos:");
+                                        System.out.println("");
+                                        askName();
+                                        name = captureDataString();
+                                        askAdress();
+                                        address = captureDataString();
+                                        askPhone();
+                                        phone = captureDataInt();
+                                        System.out.println("Gracias " + name + ", próximamente le haremos llegar la película # " + option);
+                                    } else {
+                                        System.out.println("Por favor elija una opción válida");
+                                    }
+                                    break;
+                                case 3:
+                                    System.out.println("\"Gracias por ingresar a nuestro sistema de devoluciones");
+                                    System.out.println("¿Tiene un daño o una novedad para reportar?");
+                                    System.out.println("");
+                                    System.out.println("1. Sí");
+                                    System.out.println("2. No");
+                                    option = captureOption();
+                                    if (option == 1) {
+                                        askNovelty();
+                                        novelty = captureDataString();
+                                        System.out.println("Información enviada");
+                                    } else {
+                                        System.out.println("Gracias por elegirnos");
+                                    }
+                                    break;
+                                default:
+                                    break;
+                                }
+                                
+                            }
+                            
+                            public void menu() {
+                                System.out.println("Bienvenidos a la video-tienda del barrio El Porvenir");
+                                System.out.println("");
+                                System.out.println("¿Qué desea hacer?");
+                                System.out.println("");
+                                System.out.println("1. Consultar peliculas disponibles");
+                                System.out.println("2. Alquilar película");
+                                System.out.println("3. Entregar película");
+                                option = captureOption();
+                            }
+                            
+                            public void movies() {
+                                System.out.println("Las películas disponibles son:");
+                                System.out.println("");
+                                System.out.println("1. Leyenda viva");
+                                System.out.println("2. Minions 2, nace un villano");
+                                System.out.println("3. Elvis");
+                                System.out.println("4. El hombre perfecto");
+                                System.out.println("5. Jurassic world, dominio");
+                                System.out.println("6. El fotógrafo de Minamata");
+                                System.out.println("7. Lightyear");
+                            }
+                            
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private void askName() {System.out.println("¿Cuál es tu nombre completo?");}
+                            private void askAdress() {System.out.println("¿Cuál es tu dirección?");}
+                            private void askNovelty() {System.out.println("Por favor indíquenos sus inquietudes");}
+                            private void askPhone() {System.out.println("Por favor indicanos tu número de contacto");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, 
+                        los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones 
+                        de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio5T2 {
+
+                            private String productName, name, address, description;
+                            private String vita1 = "Gomas benet colageno + biotina + vitamina e", vita2 = "Vitamina vita c mk masticable naranja", vita3 = "Emulsion de scott cereza";
+                            private String flu1 = "Dolex gripa", flu2 = "Noxpirin f caliente noche panela limon", flu3 = "Noraver gripa noche";
+                            private String nutri1 = "Ensure advance polvo vainilla", nutri2 = "Glucerna polvo vainilla", nutri3 = "Bebida lista benet frutos rojos";
+                            private String packv1 = "Tarro 150 gr", packv2 = "Blister x 10", packv3 = "Frasco x 360 cc";
+                            private String packf1 = "Blister x 4", packf2 = "Sobre x 1", packf3 = "Sobre x 1";
+                            private String packn1 = "Tarro x 400 gr", packn2 = "Tarro x 900 gr", packn3 = "Tetrapack x 330 ml";
+                            private int pricev1 = 18800, pricev2 = 4600, pricev3 = 18450, pricef1 = 3640, pricef2 = 1430, pricef3 = 2580, pricen1 = 52600, pricen2 = 97800, pricen3 = 4800;
+                            private int option, id, phone, amount;
+                            private Scanner input;
+                            
+
+                            public void Ejercicio5T2() {
+                                
+                                input = new Scanner (System.in);
+                                menu();
+                                
+                                switch (option) {
+                                case 1:
+                                    pharName();
+                                    System.out.println("Elige una categoría");
+                                    System.out.println("");
+                                    System.out.println("1. Vitaminas y minerales");
+                                    System.out.println("2. Gripa y tos");
+                                    System.out.println("3. Nutricion especializada");
+                                    option = captureOption();
+                                    
+                                    switch (option) {
+                                    case 1:
+                                        pharName();
+                                        System.out.println("***Vitaminas y minerales");
+                                        System.out.println("");
+                                        System.out.println("1. " + vita1);
+                                        System.out.println("2. " + vita2);
+                                        System.out.println("3. " + vita3);
+                                        option = captureOption();
+                                        
+                                        if (option == 1) {
+                                            pharName();
+                                            System.out.println(vita1);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricev1);
+                                            System.out.println(packv1);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }	
+                                        } 
+                                        else if (option == 2) {
+                                            pharName();
+                                            System.out.println(vita2);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricev2);
+                                            System.out.println(packv2);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }
+                                        }
+                                        else if (option == 3) {
+                                            pharName();
+                                            System.out.println(vita3);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricev3);
+                                            System.out.println(packv3);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }
+                                        } 
+                                        break;
+                                        
+                                    case 2:
+                                        pharName();
+                                        System.out.println("***Gripa y tos");
+                                        System.out.println("");
+                                        System.out.println("1. " + flu1);
+                                        System.out.println("2. " + flu2);
+                                        System.out.println("3. " + flu3);
+                                        option = captureOption();
+                                        
+                                        if (option == 1) {
+                                            pharName();
+                                            System.out.println(flu1);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricef1);
+                                            System.out.println(packf1);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }	
+                                        } 
+                                        else if (option == 2) {
+                                            pharName();
+                                            System.out.println(flu2);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricef2);
+                                            System.out.println(packf2);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }
+                                        }
+                                        else if (option == 3) {
+                                            pharName();
+                                            System.out.println(flu3);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricef3);
+                                            System.out.println(packf3);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }
+                                        } 
+                                        break;
+                                        
+                                    case 3:
+                                        pharName();
+                                        System.out.println("***Nutrición especializada");
+                                        System.out.println("");
+                                        System.out.println("1. " + nutri1);
+                                        System.out.println("2. " + nutri2);
+                                        System.out.println("3. " + nutri3);
+                                        option = captureOption();
+                                        
+                                        if (option == 1) {
+                                            pharName();
+                                            System.out.println(nutri1);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricen1);
+                                            System.out.println(packn1);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }	
+                                        } 
+                                        else if (option == 2) {
+                                            pharName();
+                                            System.out.println(nutri2);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricen2);
+                                            System.out.println(packn2);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }
+                                        }
+                                        else if (option == 3) {
+                                            pharName();
+                                            System.out.println(nutri3);
+                                            System.out.println("");
+                                            System.out.println(" $ " + pricen3);
+                                            System.out.println(packn3);
+                                            purchaseOption();
+                                            option = captureOption();
+                                            if (option == 1) {
+                                                deliveryData();
+                                            } else {
+                                                thanks();
+                                            }
+                                        } 
+                                        break;
+                                        
+                                    default:
+                                        validOption();
+                                        break;
+                                    }
+                                    
+                                    break;
+                            
+                                case 2:
+                                    refund();
+                                    option = captureOption();
+                                    if (option == 1) {
+                                        
+                                        askProductName();
+                                        productName = captureDataString();
+
+                                        askDescription();
+                                        description = captureDataString();
+                                        
+                                        askName();
+                                        name = captureDataString();
+                                        
+                                        askId();
+                                        id = captureDataInt();
+                                        
+                                        askPhone();
+                                        phone = captureDataInt();
+                                        
+                                        pharName();
+                                        System.out.println("Nombre del producto: " + productName);
+                                        System.out.println("Motivo de la devolución: " + description);
+                                        System.out.println("Nombre del usuario: " + name);
+                                        System.out.println("Cédula del usuario: " + id);
+                                        System.out.println("Número de teléfono: " + phone);
+                                        System.out.println("");
+                                        System.out.println("**Devolución exitosa**");
+                                        System.out.println("");
+                                        System.out.println("Nos pondremos en contacto con usted lo más pronto posible");
+                                        thanks();
+                                    } else {
+                                        thanks();
+                                    }
+
+                                    break;
+                                default:
+                                    validOption();
+                                    break;
+                                }
+                            }
+                            
+                            
+                            public void pharName() {
+                                System.out.println("**********************");
+                                System.out.println("**Droguería Mi Salud**");
+                                System.out.println("");
+                            }
+                            
+                            public void validOption() {
+                                System.out.println("Por favor elija una opción válida");
+                            }
+                            
+                            public void thanks() {
+                                System.out.println("Gracias por elegirnos");
+                            }
+                            
+                            public void refund() {
+                                System.out.println("Gracias por ingresar a nuestro sistema de devoluciones");
+                                System.out.println("");
+                                System.out.println("¿Tiene un daño o una novedad para reportar?");
+                                System.out.println("1. Sí");
+                                System.out.println("2. No");
+                            }
+                            
+                            public void purchaseOption() {
+                                System.out.println("");
+                                System.out.println("1. comprar");
+                                System.out.println("2. salir");
+                            }
+                            
+                            public void deliveryData() {
+                                
+                                askAddress();
+                                address = captureDataString();
+                                
+                                askName();
+                                name = captureDataString();
+                                
+                                askId();
+                                id = captureDataInt();
+                                
+                                askPhone();
+                                phone = captureDataInt();
+                                
+                                askAmount();
+                                amount = captureDataInt();
+                                
+                                System.out.println("");
+                                System.out.println("****Compra exitosa****");
+                                System.out.println("");
+                                System.out.println("Sus productos llegarán pronto");
+                                System.out.println("Gracias por elegirnos");
+                            }
+                            
+                            public void menu() {
+                                System.out.println("**Bienvenidos a la droguería Mi Salud**");
+                                System.out.println("Localidad de Suba");
+                                System.out.println("");
+                                System.out.println("¿Qué estás buscando?");
+                                System.out.println("");
+                                System.out.println("1. Búsqueda y compra de producto");
+                                System.out.println("2. Devoluciones");
+                                option = captureOption();
+                            }
+                            
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private void askProductName() {System.out.println("Por favor ingrese el nombre del producto");}
+                            private void askName() {System.out.println("Por favor ingrese su nombre completo");}
+                            private void askDescription() {System.out.println("Por favor ingrese la causa de la devolución");}
+                            private void askId() {System.out.println("Número de cédula");}
+                            private void askPhone() {System.out.println("Número telefónico");}
+                            private void askAmount() {System.out.println("Por favor indique la cantidad que desea comprar");}
+                            private void askAddress() {System.out.println("Por favor indique su dirección para pago a contraentrega");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 6</h4>
+                    <p>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar 
+                        los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+                        También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar 
+                        cambios repuestos en la motocicleta al entregarla.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio6T2 {
+
+                            private String name, address, license, reason, observation, date, observationM2, code;
+                            private String observationM =  "Su moto ha sido revisada y todos los daños han sido corregidos, recuerde hacer revisiones periódicamente.";
+                            private String nameM = "Pepito Pérez", data1 = "Observaciones del cliente: Los frenos no funcionan correctamente", data2 = "Fecha de ingreso: 08-15-2022";
+                            private int option, id, phone;
+                            private Scanner input;
+                            
+                            public void Ejercicio6T2() {
+                                
+                                input = new Scanner (System.in);
+                                menu();
+                                
+                                switch (option) {
+                                case 1:
+                                    System.out.println("****EL MAQUINISTA****");
+                                    System.out.println("");
+                                    System.out.println("");
+                                    
+                                    askName();
+                                    name = captureDataString();
+                                    menuRequest();
+                                    option = captureOption();
+                                    
+                                    switch (option) {
+                                    case 1:
+                                        System.out.println("Bienvenido(a) señor(a) " + name + ", por favor complete los siguientes datos:");
+                                        entry();
+                                        break;
+                                        
+                                    case 2:
+                                        menuObservation();
+                                        option = captureOption();
+                                        
+                                        if (option == 1) {
+                                            
+                                            askLicense();
+                                            license = captureDataString();
+                                            
+                                            askObservation();
+                                            observation = captureDataString();
+                                            
+                                            askId();
+                                            id = captureDataInt();
+                                            
+                                            askPhone();
+                                            phone = captureDataInt();
+                                            
+                                            System.out.println("****El maquinista****");
+                                            System.out.println("");
+                                            System.out.println("Nombre del usuario: " + name);
+                                            System.out.println("Número de placa:    " + license);
+                                            System.out.println("Observación:        " + observation);
+                                            System.out.println("Cédula del usuario: " + id);
+                                            System.out.println("Número de teléfono: " + phone);
+                                            System.out.println("");
+                                            System.out.println("**Observación realizada con éxito**");
+                                            System.out.println("");
+                                            System.out.println("Gracias por dejar sus observaciones, su opinión es muy importante para nosotros");
+                                            System.out.println("Gracias por elegirnos");
+
+                                        } else {
+                                            System.out.println("Gracias por elegirnos");
+                                        }
+                                        break;
+                                        
+                                    case 3:
+                                        System.out.println("Observaciones del mecánico:");
+                                        System.out.println("");
+                                        System.out.println("Señor(a) " + name + ", " + observationM);
+                                        break;
+
+                                    default:
+                                        validOption();
+                                        break;
+                                    }
+                                    break;
+                            
+                                case 2:
+                                    System.out.println("****EL MAQUINISTA****");
+                                    System.out.println("");
+                                    askCode();
+                                    code = captureDataString();
+                                    System.out.println("Bienvenido, " + nameM);
+                                    System.out.println("Indique su solicitud");
+                                    System.out.println("");
+                                    System.out.println("1. Reparar una nueva motocicleta");
+                                    System.out.println("2. Registrar salida y observaciones");
+                                    option = captureOption();
+                                        if (option == 1) {
+                                            
+                                            askLicense();
+                                            license = captureDataString();
+                                            System.out.println("*******");
+                                            System.out.println(data1);
+                                            System.out.println(data2);
+                                        } else {
+                                            if (option == 2) {
+                                                
+                                                askLicense();
+                                                license = captureDataString();
+                                                
+                                                askDate();
+                                                date = captureDataString();
+                                                
+                                                askObservationM2();
+                                                observationM2 = captureDataString();
+                                                
+                                                System.out.println("*******");
+                                                System.out.println("data1");
+                                                System.out.println("data2");
+                                                System.out.println("");
+                                                System.out.println("Fecha de salida:   " + date);
+                                                System.out.println("");
+                                                System.out.println("Mecánico:          " + nameM);
+                                                System.out.println("Observaciones:     " + observationM2);
+                                            } else {
+                                                validOption();
+                                            }
+                                        }
+                                    break;
+
+                                default:
+                                    validOption();
+                                    break;
+                                }
+                            }
+                            
+                            
+                            public void menu() {
+                                System.out.println("Bienvenidos a **EL MAQUINISTA**");
+                                System.out.println("");
+                                System.out.println("¿Qué tipo de usuario eres?");
+                                System.out.println("");
+                                System.out.println("1. Cliente");
+                                System.out.println("2. Mecánico");
+                                option = captureOption();
+                            }
+                            
+                            public void menuRequest() {
+                                System.out.println("Indique su solicitud");
+                                System.out.println("1. Ingresar motocicleta al taller");
+                                System.out.println("2. Hacer observaciones");
+                                System.out.println("3. Leer observaciones del mecánico");
+                            }
+                            
+                            public void menuObservation() {
+                                System.out.println("Gracias por ingresar a nuestro sistema de observaciones");
+                                System.out.println("");
+                                System.out.println("¿Tiene una observación para realizar?");
+                                System.out.println("1. Sí");
+                                System.out.println("2. NO");
+                            }
+                            
+                            public void entry() {
+                                System.out.println("");
+                                
+                                askLicense();
+                                license = captureDataString();
+                                
+                                askDate();
+                                date = captureDataString();
+                                
+                                askReason();
+                                reason = captureDataString();
+                                
+                                askAddress();
+                                address = captureDataString();
+                                
+                                askPhone();
+                                phone = captureDataInt();
+                                
+                                askId();
+                                id = captureDataInt();
+                                
+                                System.out.println("************************");
+                                System.out.println("Ingreso realizado con éxito");
+                                System.out.println("Apreciamos su confianza en nosotros");
+                                System.out.println("Los siguientes son sus datos de ingreso:");
+                                System.out.println("");
+                                System.out.println("Número de placa:       " + license);
+                                System.out.println("Fecha de ingreso:      " + date);
+                                System.out.println("Razón de ingreso:      " + reason);
+                                System.out.println("Dirección de contacto: " + address);
+                                System.out.println("Teléfono de contacto:  " + phone);
+                                System.out.println("Cédula:                " + id);
+                            }
+                            
+                            public void validOption() {
+                                System.out.println("Por favor elija una opción válida");
+                            }
+                            
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private void askAddress() {System.out.println("Dirección de residencia");}
+                            private void askLicense() {System.out.println("Número de placa de su motocicleta");}
+                            private void askReason() {System.out.println("Indique razón del ingreso");}
+                            private void askDate() {System.out.println("Indique fecha del ingreso");}
+                            private void askName() {System.out.println("Por favor ingrese su nombre completo");}
+                            private void askId() {System.out.println("Indique número de cédula");}
+                            private void askPhone() {System.out.println("Indique número telefónico");}
+                            private void askObservation() {System.out.println("Por favor ingrese sus observaciones");}
+                            private void askCode() {System.out.println("Bienvenido, por favor ingrese su código");}
+                            private void askObservationM2() {System.out.println("Registre sus observaciones para el cliente");}
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 7</h4>
+                    <p>La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y 
+                        estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra 
+                        (bajo peso, normal, sobrepeso y obeso).</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio7T2 {
+                            private int weight;
+                            private double res, height, imc;
+                            private Scanner input;
+                            
+                            public void Ejercicio7T2() {
+                                
+                                input = new Scanner (System.in);
+                                menu();
+                                
+                                double imc = (weight/(height*height));
+                                
+                                System.out.println("Su IMC es de: " + imc);
+                                
+                                
+                                if (imc < 18.5) {
+                                    System.out.println("**Usted tiene bajo peso");
+                                } else {
+                                    if (imc >= 18.5 && imc < 24.9) {
+                                        System.out.println("**Usted tiene peso normal");
+                                    } else {
+                                        if (imc >= 24.9 && imc < 29.9) {
+                                            System.out.println("**Usted tiene sobrepeso");
+                                        } else {
+                                            System.out.println("**Usted tiene obesidad");
+                                        }
+                                    }
+                                }
+                            }
+                            
+
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            public void menu() {
+                                System.out.println("Secretaría de salud municipal");
+                                System.out.println("");
+                                System.out.println("Calculadora de IMC");
+                                System.out.println("");
+                                System.out.println("Por favor indique los siguientes datos:");
+                                System.out.println("");
+                                
+                                askWeight();
+                                weight = captureDataInt();
+                                
+                                askHeight();
+                                height = captureDataDouble();
+                            }
+                            
+                            private void askWeight() {System.out.println("¿Cuál es su peso (en kilogramos)?");}
+                            private void askHeight() {System.out.println("¿Cuál es su estatura (en metros)?");}
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                            
+                            private double captureDataDouble() {
+                                return input.nextDouble();
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 8</h4>
+                    <p>El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. 
+                        Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, 
+                        las tortas disponibles y las ventas que se registren diariamente.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio8T2 {
+                            
+                            private String registration, sales, flavor, product;
+                            private int stock, option, price, portion, decor, amount, discount;
+                            private Scanner input;
+                            
+                            public void Ejercicio8T2() {
+                                input = new Scanner (System.in);
+                                
+                                generalMenu();
+                                
+                                switch (option) {
+                                case 1:
+                                    System.out.println("***Pastelería don Carlos***");
+                                    System.out.println("");
+                                    System.out.println("Registrar pedido");
+                                    System.out.println("");
+                                    
+                                    askFlavor();
+                                    flavor = captureDataString();
+                                    
+                                    askPortion();
+                                    portion = captureDataInt();
+                                    
+                                    askDecor();
+                                    decor = captureDataInt();
+                                    
+                                    askAmount();
+                                    amount = captureDataInt();
+                                    
+                                    System.out.println("*******");
+                                    System.out.println("Pedido registrado con éxito");
+                                    System.out.println(amount + " torta(s) sabor " + flavor + " de " + portion + " porciones y decoraciones tipo " + decor);
+                                    break;
+
+                                case 2:
+                                    stockMenu();
+                                    
+                                    if (option == 1) {
+                                        stockC();
+                                    } else {
+                                        if (option == 2) {
+                                            stockS();
+                                        } else {
+                                            if (option == 3) {
+                                                stockV();
+                                            }
+                                        }
+                                    }
+                                    break;
+                                    
+                                case 3:
+                                    System.out.println("***Pastelería don Carlos***");
+                                    System.out.println("");
+                                    System.out.println("Ventas");
+                                    System.out.println("");
+                                    
+                                    askProduct();
+                                    product = captureDataString();
+                                    
+                                    askFlavor();
+                                    flavor = captureDataString();
+                                    
+                                    askPrice();
+                                    price = captureDataInt();
+                                    
+                                    askAmount();
+                                    amount = captureDataInt();
+                                    
+                                    askDiscount();
+                                    discount = captureDataInt();
+                                    
+                                    System.out.println("total: " + ((price * amount) - (price * amount * discount / 100)));
+                                    System.out.println("Producto registrado satisfactoriamente");
+                                    break;
+                            
+                                default:
+                                    System.out.println("La operación es inválida");
+                                    break;
+                                }
+                            }
+                            
+                            
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            public void generalMenu() {
+                                System.out.println("***Pastelería don Carlos***");
+                                System.out.println("");
+                                System.out.println("¿Qué desea hacer?");
+                                System.out.println("");
+                                System.out.println("1. Registrar pedido");
+                                System.out.println("2. Ver stock de tortas");
+                                System.out.println("3. Ventas");
+                                option = captureOption();
+                            }
+                            
+                            public void stockMenu() {
+                                System.out.println("***Pastelería don Carlos***");
+                                System.out.println("");
+                                System.out.println("Stock de tortas");
+                                System.out.println("");
+                                System.out.println("1. Tortas de chocolate");
+                                System.out.println("2. Tortas de fresa");
+                                System.out.println("3. Tortas de vainilla");
+                                option = captureOption();
+                            }
+                            
+                            public void stockC() {
+                                System.out.println("***Pastelería don Carlos***");
+                                System.out.println("");
+                                System.out.println("Stock tortas de chocolate");
+                                System.out.println("");
+                                System.out.println("1 porción_____18 unidades");
+                                System.out.println("4 porciones___16 unidades");
+                                System.out.println("8 porciones___7 unidades");
+                                System.out.println("12 porciones__9 unidades");
+                            }
+                            
+                            public void stockS() {
+                                System.out.println("***Pastelería don Carlos***");
+                                System.out.println("");
+                                System.out.println("Stock tortas de fresa");
+                                System.out.println("");
+                                System.out.println("1 porción_____43 unidades");
+                                System.out.println("4 porciones___12 unidades");
+                                System.out.println("8 porciones___7 unidades");
+                                System.out.println("12 porciones__14 unidades");
+                            }
+                            
+                            public void stockV() {
+                                System.out.println("***Pastelería don Carlos***");
+                                System.out.println("");
+                                System.out.println("Stock tortas de vainilla");
+                                System.out.println("");
+                                System.out.println("1 porción_____15 unidades");
+                                System.out.println("4 porciones___32 unidades");
+                                System.out.println("8 porciones___4 unidades");
+                                System.out.println("12 porciones__7 unidades");
+                            }
+                            
+                            
+                            private void askFlavor() {System.out.println("De qué sabor es la torta?");
+                                System.out.println("Chocolate");
+                                System.out.println("Fresa");
+                                System.out.println("Vainilla");
+                            }
+                            private void askPortion() {System.out.println("Elegir porciones");
+                                System.out.println("1");
+                                System.out.println("4");
+                                System.out.println("8");
+                                System.out.println("12");
+                            }
+                            private void askDecor() {System.out.println("Elegir decoraciones");
+                                System.out.println("1. Ninguna");
+                                System.out.println("2. Pocas");
+                                System.out.println("3. Normales");
+                                System.out.println("4. Muchas");
+                            }
+                            private void askAmount() {System.out.println("Por favor indique el número de tortas pedidas");}
+                            private void askDiscount() {System.out.println("Descuento a aplicar:");}
+                            private void askPrice() {System.out.println("¿Cuál es el precio del producto?");}
+                            private void askProduct() {System.out.println("Nombre del producto");}
+                            
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }	
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 9</h4>
+                    <p>El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le 
+                        facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, 
+                        triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio9T2 {
+                            
+                            private int option;
+                            private double rect, tria, trap, length, width, lengthB;
+                            private Scanner input;
+                                
+                            public void Ejercicio9T2() {
+                                input = new Scanner (System.in);
+                                
+                                System.out.println("¿Qué operación desea realizar?");
+                                System.out.println("");
+                                System.out.println("1. Área de un rectángulo");
+                                System.out.println("2. Área de un triángulo");
+                                System.out.println("3. Área de un trapecio");
+                                option = captureOption();
+                                
+                                switch (option) {
+                                case 1:
+                                    rectangleArea();
+                                    break;
+                                    
+                                case 2:
+                                    triangleArea();
+                                    break;
+                                    
+                                case 3:
+                                    trapezoidArea();
+                                    break;
+
+                                default:
+                                    System.out.println("La operación no existe");
+                                    break;
+                                }	
+                            }
+                            
+                            
+                            public void rectangleArea() {
+                                System.out.println("ÁREA DE UN RECTÁNGULO");
+                                System.out.println("");
+                                
+                                askLength();
+                                length = captureDataDouble();
+                                
+                                askWidth();
+                                width = captureDataDouble();
+                                
+                                rect = (length * width);
+                                System.out.println("El área es: " + rect);
+                            }
+                            
+                            public void triangleArea() {
+                                System.out.println("ÁREA DE UN TRIÁNGULO");
+                                System.out.println("");
+                                
+                                askLength();
+                                length = captureDataDouble();
+                                
+                                askWidth();
+                                width = captureDataDouble();
+                                
+                                tria = ((length * width)/2);
+                                System.out.println("El área es: " + tria);
+                            }
+                            
+                            public void trapezoidArea() {
+                                System.out.println("ÁREA DE UN TRAPECIO");
+                                System.out.println("");
+                                
+                                askLength();
+                                length = captureDataDouble();
+                                
+                                askLengthB();
+                                lengthB = captureDataDouble();
+                                
+                                askWidth();
+                                width = captureDataDouble();
+                                
+                                trap = (((length + lengthB)*width)/2);
+                                System.out.println("El área es: " + trap);
+                            }
+                            
+                            private void askLength() {System.out.println("Ingrese la base");}
+                            private void askLengthB() {System.out.println("Ingrese la base 2");}
+                            private void askWidth() {System.out.println("Ingrese la altura");}
+                            
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private double captureDataDouble() {
+                                return input.nextDouble();
+                            }	
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 10</h4>
+                    <p>El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, 
+                        se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. 
+                        En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller2;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio10T2 {
+
+                            private String head = "Carlos Ardila";
+                            private int option, balanceInquiry = 10500000, entry, withdrawal;
+                            private Scanner input;
+
+                            public void Ejercicio10T2() {
+                                input = new Scanner (System.in);
+                                
+                                System.out.println("*******Su banco fiel*******");
+                                System.out.println("");
+                                System.out.println("Bienvenido " + head + "!");
+                                generalMenu();
+                                
+                                switch (option) {
+                                case 1:
+                                    entry();
+                                    if (entry < 0) {
+                                        System.out.println("No se pueden ingresar valores negativos");
+                                        System.out.println("Por favor, intente con otro monto");
+                                    } else {
+                                        System.out.println("Ingreso realizado con éxito");
+                                        System.out.println("");
+                                        System.out.println(head + ", su saldo actual es: $" + (balanceInquiry + entry));
+                                    }
+                                    break;
+                                    
+                                case 2:
+                                    withdrawal();
+                                    if (withdrawal > balanceInquiry) {
+                                        System.out.println("Los retiros no pueden ser mayores al saldo actual");
+                                        System.out.println("Por favor, intente con otro monto");
+                                    } else {
+                                        System.out.println("Retiro realizado con éxito");
+                                        System.out.println("");
+                                        System.out.println(head + ", su saldo actual es: $" + (balanceInquiry - withdrawal));
+                                    }
+                                    break;
+                                    
+                                case 3:
+                                    System.out.println("*******Su banco fiel*******");
+                                    System.out.println("");
+                                    System.out.println(head + ", su saldo actual es: $" + balanceInquiry);
+                                    break;
+                                    
+                                default:
+                                    System.out.println("La operación es inválida");
+                                    break;
+                                }		
+                            }
+                            
+                            public void generalMenu() {
+                                System.out.println("");
+                                System.out.println("");
+                                System.out.println("¿Qué operación desea realizar?");
+                                System.out.println("");
+                                System.out.println("1. Realizar ingreso");
+                                System.out.println("2. Realizar retiro");
+                                System.out.println("3. Consultar saldo");
+                                option = captureOption();
+                            }
+                            
+                            public void entry() {
+                                System.out.println("*******Su banco fiel*******");
+                                System.out.println("");
+                                System.out.println("Realizar ingreso");
+                                askEntry();
+                                entry = captureDataInt();
+                            }
+                            
+                            public void withdrawal() {
+                                System.out.println("*******Su banco fiel*******");
+                                System.out.println("");
+                                System.out.println("Realizar retiro");
+                                askWithdrawal();
+                                withdrawal = captureDataInt();
+                            }
+                            
+                            
+                            
+                            
+                            private void askWithdrawal() {System.out.println("Por favor ingrese un monto");}
+                            private void askEntry() {System.out.println("Por favor ingrese un monto");}
+                            
+                            public int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private String captureDataString() {
+                                return input.nextLine();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }	
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

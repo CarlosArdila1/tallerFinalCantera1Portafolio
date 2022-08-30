@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Taller de funciones 3</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Punto 3 del taller de funciones _ Arreglos</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="pseint.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h5 class="titulo">Organizar todos los puntos del taller de arreglos en modo funciones.</h5>
+        <section class="containerCards">
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, 
+                        se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</p>
+                    <ul type="circle">
+                        <li>[0] = 55</li>
+                        <li>[1] = 99</li>
+                        <li>[2] = 11</li>
+                        <li>[3] = 56</li>
+                        <li>[4] = 69</li>
+                    </ul><br>
+                    <pre class="code">
+                        SubProceso menu()
+                            Limpiar Pantalla;
+                            Escribir "Bienvenido";
+                            Escribir "";
+                            Escribir "1. Ingresar números";
+                            Escribir "2. Ver vector";
+                            Escribir "3. Salir";
+                        FinSubProceso
+
+                        SubProceso teclaContinuar()
+                            Escribir "";
+                            Escribir "Presione cualquier tecla para continuar";
+                            Esperar Tecla;
+                        FinSubProceso
+
+                        SubProceso dato <- captura(mensaje)
+                            Definir dato Como Caracter;
+                            Escribir mensaje;
+                            Leer dato;
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eArreglos1
+                            definir opcion, dato Como Entero;
+                            Definir data Como Caracter;
+                            Dimension data[5];
+                            
+                            Repetir
+                                menu();
+                                Leer opcion;
+                                Segun opcion Hacer
+                                    1:
+                                        Limpiar Pantalla;
+                                        data[0]<-captura("Digita primer número");
+                                        data[1]<-captura("Digita segundo número");
+                                        data[2]<-captura("Digita tercer número");
+                                        data[3]<-captura("Digita cuarto número");
+                                        data[4]<-captura("Digita quinto número");
+                                        teclaContinuar();
+                                    2:
+                                        Limpiar Pantalla;
+                                        Escribir "[0] = ", data[0];
+                                        Escribir "[1] = ", data[1];
+                                        Escribir "[2] = ", data[2];
+                                        Escribir "[3] = ", data[3];
+                                        Escribir "[4] = ", data[4];
+                                        teclaContinuar();
+                                    De Otro Modo:
+                                        teclaContinuar();
+                                FinSegun
+                            Hasta Que opcion = 3
+                            Escribir "Salida exitosa";
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; 
+                        después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e 
+                        imprimir los números pares e impares. Ejemplo</p>
+                        <ul type="circle">
+                            <li>Números pares: 2, 4, 6, 8, 10</li>
+                            <li>Números impares: 1, 3, 5, 7, 9</li>
+                        </ul><br>
+                    <pre class="code">
+                        SubProceso pares()
+                            Definir aleat, i, j Como Entero;
+                            Dimension aleat[20];
+                            
+                            Para i<-0 Hasta 19 Con Paso 1 Hacer
+                                aleat[i] <- azar(100)+1;
+                            FinPara
+                            Escribir Sin Saltar "Números pares: ";
+                            Para j<-0 Hasta 19 Con Paso 1 Hacer
+                                Si aleat[j] % 2=0 Entonces
+                                    Escribir Sin Saltar aleat[j], ", ";
+                                FinSi
+                            FinPara
+                        FinSubProceso
+
+                        SubProceso impares()
+                            Definir aleat, i, j Como Entero;
+                            Dimension aleat[20];
+                            
+                            Para i<-0 Hasta 19 Con Paso 1 Hacer
+                                aleat[i] <- azar(100)+1;
+                            FinPara
+                            Escribir "";
+                            Escribir Sin Saltar "Números impares: ";
+                            Para j<-0 Hasta 19 Con Paso 1 Hacer
+                                Si aleat[j] % 2=1 Entonces
+                                    Escribir Sin Saltar aleat[j], ", ";
+                                FinSi
+                            FinPara
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eArreglos2
+                            pares();
+                            impares();
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p><br>
+                    <pre class="code">
+                        SubProceso noprimo<-buscador(nro)
+                            Definir i Como Entero;
+                            Definir noprimo Como Logico;
+                            noprimo<-Falso;
+                            i<-2;
+                            Mientras i < nro Y noprimo=Falso Hacer
+                                Si nro%i=0 Entonces
+                                    noprimo<-Verdadero;
+                                FinSi
+                                i<-i+1;
+                            FinMientras
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eArreglos3
+                            Definir j Como Entero;
+                            j<-2;
+                            Escribir "Números primos:";
+                            Mientras j<=1000 Hacer
+                                Si buscador(j)=Falso Entonces
+                                    Escribir Sin Saltar j,", ";
+                                FinSi
+                                j<-j+1;
+                            FinMientras
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</p>
+                    <ul type="circle">
+                        <li>01 02 03 04 05</li>
+                        <li>06 07 08 09 10</li>
+                        <li>11 12 13 14 15</li>
+                        <li>16 17 18 19 20</li>
+                    </ul>
+                    <p>Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</p>
+                    <ul type="circle">
+                        <li>01 02 03 04 05</li>
+                        <li>10 09 08 07 06</li>
+                        <li>11 12 13 14 15</li>
+                        <li>20 19 18 17 16</li>
+                    </ul><br>
+                    <pre class="code">
+                        SubProceso original()
+                            Escribir " ";
+                            Escribir "Matriz original:";
+                            Escribir " ";
+                        FinSubProceso
+
+                        SubProceso modificada()
+                            Escribir " ";
+                            Escribir " ";
+                            Escribir "Matriz original:";
+                            Escribir " ";
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eArreglos4
+                            Definir fila, columna Como Entero;
+                            Definir matriz Como Caracter;
+                            Dimension matriz[4,5];
+                            
+                            matriz[0,0] <- "01";	matriz[0,1] <- "02";	matriz[0,2] <- "03";	matriz[0,3] <- "04";	matriz[0,4] <- "05";
+                            matriz[1,0] <- "06";	matriz[1,1] <- "07";	matriz[1,2] <- "08";	matriz[1,3] <- "09";	matriz[1,4] <- "10";
+                            matriz[2,0] <- "11";	matriz[2,1] <- "12";	matriz[2,2] <- "13";	matriz[2,3] <- "14";	matriz[2,4] <- "15";
+                            matriz[3,0] <- "16";	matriz[3,1] <- "17";	matriz[3,2] <- "18";	matriz[3,3] <- "19";	matriz[3,4] <- "20";
+                            
+                            original();
+                            Para fila <- 0 Hasta 3 Con Paso 1 Hacer
+                                Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+                                    Escribir Sin Saltar matriz[fila,columna], " ";
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                            
+                            modificada();
+                            Para fila <- 0 Hasta 0 Con Paso 1 Hacer
+                                Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+                                    Escribir Sin Saltar matriz[fila,columna], " ";
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                            
+                            Para fila <- 1 Hasta 1 Con Paso 1 Hacer
+                                Para columna <- 4 Hasta 0 Con Paso -1 Hacer
+                                    Escribir Sin Saltar matriz[fila,columna], " ";
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                            
+                            Para fila <- 2 Hasta 2 Con Paso 1 Hacer
+                                Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+                                    Escribir Sin Saltar matriz[fila,columna], " ";
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                            
+                            Para fila <- 3 Hasta 3 Con Paso 1 Hacer
+                                Para columna <- 4 Hasta 0 Con Paso -1 Hacer
+                                    Escribir Sin Saltar matriz[fila,columna], " ";
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>Se debe de imprimir el siguiente cuadro</p>
+                    <img src="../images/arreglos5.png" alt="" height="225" class="d-inline-block align-text-top"><br>
+                    <p>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una 
+                        matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</p><br>
+                    <pre class="code">
+                        SubProceso identificadorColumna()
+                            Escribir "                       COLUMNA";
+                            Escribir Sin Saltar " ",0,"     ",1,"     ",2,"     ",3,"     ",4,"     ",5,"     ",6,"     ",7,"     ",8,"     ",9;
+                            Escribir "";
+                        FinSubProceso
+
+                        SubProceso dato <- captura(mensaje)
+                            Definir dato Como Entero;
+                            Escribir mensaje;
+                            Leer dato;
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eArreglos5
+                            Definir fila, columna, matriz, dato, data Como Entero;
+                            Dimension matriz[11,11];
+                            Dimension data[2];
+                            
+                            identificadorColumna();
+                            Para fila<-1 Hasta 10 Con Paso 1 Hacer
+                                Para columna<-1 Hasta 10 Con Paso 1 Hacer
+                                    matriz[fila, columna] <- fila * columna;
+                                FinPara
+                            FinPara
+                                
+                            Para fila<-1 Hasta 10 Con Paso 1 Hacer
+                                Para columna<-1 Hasta 10 Con Paso 1 Hacer
+                                    Si fila <> 10 Entonces
+                                        Escribir Sin Saltar columna, "x", fila, "   ";
+                                    SiNo
+                                        Escribir Sin Saltar columna, "x", fila, "  ";
+                                    FinSi
+                                FinPara
+                                Escribir "";
+                            FinPara
+                            
+                            data[0] <- fila;
+                            data[1] <- columna;
+                            data[0]<-captura("Ingrese posición de la fila (0-9):");
+                            data[1]<-captura("Ingrese posición de la columna (0-9):");
+                            Escribir "La respuesta es: ", (data[0] + 1) * (data[1] + 1);
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Taller de funciones 1</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Punto 1 del taller de funciones _ Condicionales</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="pseint.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h5 class="titulo">Organizar todos los puntos del taller de condicionales en modo funciones.</h5>
+        <section class="containerCards">
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p><br>
+                    <pre class="code">
+                        SubProceso preguntarMayor ()
+                            Definir edad Como Entero;
+                            Escribir "¿Cuántos años tienes?";
+                            Leer edad;
+                            Si edad >= 18 Entonces
+                                Escribir "Usted es mayor de edad";
+                            FinSi
+                        FinSubProceso
+
+
+                        Proceso CI_Semana2_Taller2_eCondicionales1
+                            
+                            preguntarMayor();
+                            
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p><br>
+                    <pre class="code">
+                        SubProceso preguntarMenor()
+                            Definir edad Como Entero;
+                            
+                            Escribir "¿Cuántos años tienes?";
+                            Leer edad;
+                            
+                            Si edad < 18 Entonces
+                                Escribir "Usted aún es un niño(a)";
+                            FinSi
+                            
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales2
+
+                            preguntarMenor();
+                            
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonces se deberá imprimir en pantalla 
+                        [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, 
+                        deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p><br>
+                    <pre class="code">
+                        SubProceso preguntar()
+	
+                            Definir nombre, apellidos Como Caracter;
+                            Definir edad Como Entero;
+                            Escribir "¿Cuál es tu nombre?";
+                            Leer nombre;
+                            Escribir "¿Cuáles son tus apellidos?";
+                            Leer apellidos;
+                            Escribir "¿Qué edad tienes?";
+                            Leer edad;
+                            
+                            Si edad >= 18 Entonces
+                                Escribir nombre, " ", apellidos, " usted es mayor de edad, por lo tanto puede entrar a la fiesta";
+                            SiNo
+                                Escribir nombre, " ", apellidos, " usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuélvase a su casa.";
+                            FinSi
+                            
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales3
+                            
+                            preguntar();
+                            
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler 
+                        de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película 
+                        en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p><br>
+                    <pre class="code">
+                        SubProceso menu()
+                            Escribir "Bienvenidos a la video-tienda del barrio El Porvenir";
+                            Escribir " ";
+                            Escribir "¿Qué desea hacer?";
+                            Escribir " ";
+                            Escribir "1. Consultar peliculas disponibles";
+                            Escribir "2. Alquilar película";
+                            Escribir "3. Entregar película";
+                        FinSubProceso
+
+                        SubProceso catalogo()
+                            Escribir "1. Leyenda viva";
+                            Escribir "2. Minions 2, nace un villano";
+                            Escribir "3. Elvis";
+                            Escribir "4. El hombre perfecto";
+                            Escribir "5. Jurassic world, dominio";
+                            Escribir "6. El fotógrafo de Minamata";
+                            Escribir "7. Lightyear";
+                        FinSubProceso
+
+                        SubProceso opcionValida()
+                            Escribir "Por favor elija una opción válida";
+                        FinSubProceso
+
+
+                        Proceso CI_Semana2_Taller2_eCondicionales4
+                            Definir opcion, telefono Como Entero;
+                            Definir novedad, nombre, direccion Como Caracter;
+                            
+                            menu();
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Limpiar Pantalla;
+                                    Escribir "Las películas disponibles son:";
+                                    Escribir " ";
+                                    catalogo();
+                                    Leer opcion;
+                                    Limpiar Pantalla;
+                                2:
+                                    Limpiar Pantalla;
+                                    Escribir "Seleccione la pelicula que desea alquilar";
+                                    Escribir " ";
+                                    catalogo();
+                                    Leer opcion;
+                                    Limpiar Pantalla;
+                                    
+                                    Si opcion > 0 & opcion <= 7 Entonces
+                                        Escribir "Por favor complete los siguientes datos:";
+                                        Escribir " ";
+                                        Escribir "¿Cuál es tu nombre completo?";
+                                        Leer nombre;
+                                        Escribir "¿Cuál es tu dirección?";
+                                        Leer direccion;
+                                        Escribir "Por favor indicanos tu número de contacto";
+                                        Leer telefono;
+                                        Escribir "Gracias ", nombre, ", próximamente le haremos llegar la película # ", opcion;
+                                    SiNo
+                                        opcionValida();
+                                    FinSi
+                                3:
+                                    Limpiar Pantalla;
+                                    Escribir "Gracias por ingresar a nuestro sistema de devoluciones";
+                                    Escribir "";
+                                    Escribir "¿Tiene un daño o una novedad para reportar?";
+                                    Escribir "1. Sí";
+                                    Escribir "2. No";
+                                    Leer opcion;
+                                    Si opcion = 1 Entonces
+                                        Escribir "Por favor indíquenos sus inquietudes";
+                                        leer novedad;
+                                        Escribir "Información enviada";
+                                    SiNo
+                                        Escribir "Gracias por elegirnos";
+                                    FinSi
+                                De Otro Modo:
+                                    opcionValida();
+                            FinSegun
+                            
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, 
+                        los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones 
+                        de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p><br>
+                    <pre class="code">
+                        SubProceso nombreD()
+                            Escribir "**Droguería Mi Salud**";
+                            Escribir " ";
+                        FinSubProceso
+
+                        SubProceso opcionValida() 
+                            Escribir "Por favor elija una opción válida";
+                        FinSubProceso
+
+                        SubProceso gracias()
+                            Escribir "Gracias por elegirnos";
+                        FinSubProceso
+
+                        SubProceso compraExitosa()
+                            Escribir "**Compra exitosa**";
+                            Escribir "";
+                            Escribir "Sus productos llegarán pronto";
+                            Escribir "Gracias por elegirnos";
+                        FinSubProceso
+
+                        SubProceso devolucion()
+                            Escribir "Gracias por ingresar a nuestro sistema de devoluciones";
+                            Escribir "";
+                            Escribir "¿Tiene un daño o una novedad para reportar?";
+                            Escribir "1. Sí";
+                            Escribir "2. No";
+                        FinSubProceso
+
+                        SubProceso datosEntrega()
+                            Definir cantidad, cedula, cel Como Entero;
+                            Definir nombre, direccion Como Caracter;
+                            
+                            Escribir "Por favor indique la cantidad que desea comprar";
+                            Leer cantidad;
+                            Escribir "Por favor ingrese su nombre completo";
+                            Leer nombre;
+                            Escribir "Número de cédula";
+                            Leer cedula;
+                            Escribir "Número telefónico";
+                            Leer cel;
+                            Escribir "Por favor indique su dirección para pago a contraentrega";
+                            Leer direccion;
+                        FinSubProceso
+
+                        SubProceso opcionCompra()
+                            Escribir " ";
+                            Escribir "1. comprar";
+                            Escribir "2. salir";
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales5
+                            Definir opcion, cedula, cel, opcionp, opcionv, opciong, opcionn, comprar Como Entero;
+                            Definir producto, nombre, descripcion Como Caracter;
+                            Definir vita1, vita2, vita3, gripa1, gripa2, gripa3, nutri1, nutri2, nutri3 Como Caracter;
+                            Definir pricev1, pricev2, pricev3, priceg1, priceg2, priceg3, pricen1, pricen2, pricen3 Como Entero;
+                            definir formav1, formav2, formav3, formag1, formag2, formag3, forman1, forman2, forman3 Como Caracter;
+                            
+                            vita1 <- "Gomas benet colageno + biotina + vitamina e";
+                            pricev1 <- 18800;
+                            formav1 <- "Tarro 150 gr";
+                            vita2 <- "Vitamina vita c mk masticable naranja";
+                            pricev2 <- 4600;
+                            formav2 <- "Blister x 10";
+                            vita3 <- "Emulsion de scott cereza";
+                            pricev3 <- 18450;
+                            formav3 <- "Frasco x 360 cc";
+                            
+                            gripa1 <- "Dolex gripa";
+                            priceg1 <- 3640;
+                            formag1 <- "Blister x 4";
+                            gripa2 <- "Noxpirin f caliente noche panela limon";
+                            priceg2 <- 1430;
+                            formag2 <- "Sobre x 1";
+                            gripa3 <- "Noraver gripa noche";
+                            priceg3 <- 2580;
+                            formag3 <- "Sobre x 1";
+                            
+                            nutri1 <- "Ensure advance polvo vainilla";
+                            pricen1 <- 52600;
+                            forman1 <- "Tarro x 400 gr";
+                            nutri2 <- "Glucerna polvo vainilla";
+                            pricen2 <- 97800;
+                            forman2 <- "Tarro x 900 gr";
+                            nutri3 <- "Bebida lista benet frutos rojos";
+                            pricen3 <- 4800;
+                            forman3 <- "Tetrapack x 330 ml";
+                            
+                            Escribir "**Bienvenidos a la droguería Mi Salud**";
+                            Escribir "Localidad de Suba";
+                            Escribir " ";
+                            Escribir "¿Qué estás buscando?";
+                            Escribir " ";
+                            Escribir "1. Búsqueda y compra de producto";
+                            Escribir "2. Devoluciones";
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Limpiar Pantalla;
+                                    nombreD();
+                                    Escribir "Elige una categoría";
+                                    Escribir " ";
+                                    Escribir "1. Vitaminas y minerales";
+                                    Escribir "2. Gripa y tos";
+                                    Escribir "3. Nutricion especializada";
+                                    Leer opcionp;
+                                    
+                                    Segun opcionp Hacer
+                                        1:
+                                            Limpiar Pantalla;
+                                            nombreD();
+                                            Escribir "***Vitaminas y minerales";
+                                            Escribir " ";
+                                            Escribir "1. ", vita1;
+                                            Escribir "2. ", vita2;
+                                            Escribir "3. ", vita3;
+                                            Leer opcionv;
+                                            Limpiar Pantalla;
+                                            Si opcionv = 1 Entonces
+                                                nombreD();
+                                                Escribir vita1;
+                                                Escribir " ";
+                                                Escribir " $ ", pricev1;
+                                                Escribir formav1;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                            Si opcionv = 2 Entonces
+                                                nombreD();
+                                                Escribir vita2;
+                                                Escribir " ";
+                                                Escribir " $ ", pricev2;
+                                                Escribir formav2;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                            Si opcionv = 3 Entonces
+                                                nombreD();
+                                                Escribir vita3;
+                                                Escribir " ";
+                                                Escribir " $ ", pricev3;
+                                                Escribir formav3;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            SiNo
+                                            FinSi
+                                        2:
+                                            Limpiar Pantalla;
+                                            nombreD();
+                                            Escribir "***Gripa y tos";
+                                            Escribir " ";
+                                            Escribir "1. ", gripa1;
+                                            Escribir "2. ", gripa2;
+                                            Escribir "3. ", gripa3;
+                                            Leer opciong;
+                                            Limpiar Pantalla;
+                                            Si opciong = 1 Entonces
+                                                nombreD();
+                                                Escribir gripa1;
+                                                Escribir " ";
+                                                Escribir " $ ", priceg1;
+                                                Escribir formag1;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                            Si opciong = 2 Entonces
+                                                nombreD();
+                                                Escribir gripa2;
+                                                Escribir " ";
+                                                Escribir " $ ", priceg2;
+                                                Escribir formag2;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                            Si opciong = 3 Entonces
+                                                nombreD();
+                                                Escribir gripa3;
+                                                Escribir " ";
+                                                Escribir " $ ", priceg3;
+                                                Escribir formag3;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                        3:
+                                            Limpiar Pantalla;
+                                            nombreD();
+                                            Escribir "***Nutrición especializada";
+                                            Escribir " ";
+                                            Escribir "1. ", nutri1;
+                                            Escribir "2. ", nutri2;
+                                            Escribir "3. ", nutri3;
+                                            Leer opcionn;
+                                            Limpiar Pantalla;
+                                            Si opcionn = 1 Entonces
+                                                nombreD();
+                                                Escribir nutri1;
+                                                Escribir " ";
+                                                Escribir " $ ", pricen1;
+                                                Escribir forman1;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                            Si opcionn = 2 Entonces
+                                                nombreD();
+                                                Escribir nutri2;
+                                                Escribir " ";
+                                                Escribir " $ ", pricen2;
+                                                Escribir forman2;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                            Si opcionn = 3 Entonces
+                                                nombreD();
+                                                Escribir nutri3;
+                                                Escribir " ";
+                                                Escribir " $ ", pricen3;
+                                                Escribir forman3;
+                                                opcionCompra();
+                                                leer comprar;
+                                                Si comprar = 1 Entonces
+                                                    Limpiar Pantalla;
+                                                    datosEntrega();
+                                                    compraExitosa();
+                                                SiNo
+                                                    gracias();
+                                                FinSi
+                                            FinSi
+                                        De Otro Modo:
+                                            opcionValida();
+                                    FinSegun
+                                2:
+                                    Limpiar Pantalla;
+                                    devolucion();
+                                    Leer opcion;
+                                    Si opcion = 1 Entonces
+                                        Escribir "Por favor ingrese el nombre del producto";
+                                        Leer producto;
+                                        Escribir "Por favor ingrese su nombre completo";
+                                        Leer nombre;
+                                        Escribir "Número de cédula";
+                                        Leer cedula;
+                                        Escribir "Número telefónico";
+                                        Leer cel;
+                                        Escribir "Por favor ingrese la causa de la devolución";
+                                        Leer descripcion;
+                                        Limpiar Pantalla;
+                                        nombreD();
+                                        Escribir "Nombre del producto: ", producto;
+                                        Escribir "Nombre del usuario: ", nombre;
+                                        Escribir "Cedula del usuario: ", cedula;
+                                        Escribir "Número de teléfono: ", cel;
+                                        Escribir "Motivo de la devolución: ", descripcion;
+                                        Escribir "";
+                                        Escribir "**Devolución exitosa**";
+                                        Escribir "";
+                                        Escribir "Nos pondremos en contacto con usted lo más pronto posible";
+                                        gracias();
+                                    SiNo
+                                        gracias();
+                                    FinSi
+                                De Otro Modo:
+                                    opcionValida();
+                            FinSegun
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 6</h4>
+                    <p>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar 
+                        los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+                        También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar 
+                        cambios repuestos en la motocicleta al entregarla.</p><br>
+                    <pre class="code">
+                        SubProceso menu()
+                            Escribir "Bienvenidos a **EL MAQUINISTA**";
+                            Escribir " ";
+                            Escribir "¿Qué tipo de usuario eres??";
+                            Escribir " ";
+                            Escribir "1. Cliente";
+                            Escribir "2. Mecánico";
+                        FinSubProceso
+
+                        SubProceso menus()
+                            Escribir "Indique su solicitud";
+                            Escribir "1. Ingresar motocicleta al taller";
+                            Escribir "2. Hacer observaciones";
+                            Escribir "3. Leer observaciones del mecánico";
+                        FinSubProceso
+
+                        SubProceso opcionValida()
+                            Escribir "Por favor elija una opción válida";
+                        FinSubProceso
+
+                        SubProceso ingreso()
+                            Definir cedula, cel Como Entero;
+                            Definir placa, direccion, fecha, razon Como Caracter;
+                            Escribir " ";
+                            Escribir "Número de cédula";
+                            Leer cedula;
+                            Escribir "Número telefónico";
+                            Leer cel;
+                            Escribir "Dirección de residencia";
+                            Leer direccion;
+                            Escribir "Número de placa de su motocicleta";
+                            Leer placa;
+                            Escribir "Indique razón del ingreso";
+                            leer razon;
+                            Escribir "Indique fecha del ingreso";
+                            Leer fecha;
+                            Limpiar Pantalla;
+                            Escribir "Ingreso realizado con éxito";
+                            Escribir "Apreciamos su confianza en nosotros";
+                            Escribir " ";
+                            Escribir "Los siguientes son sus datos de ingreso:";
+                            Escribir "Cédula:               ", cedula;
+                            Escribir "Teléfono de contacto: ", cel;
+                            Escribir "Número de placa:      ", placa;
+                            Escribir "Dirección de contacto:", direccion;
+                            Escribir "Fecha de ingreso:     ", fecha;
+                            Escribir "Razón de ingreso:     ", razon;
+                        FinSubProceso
+
+                        SubProceso menuO()
+                            Limpiar Pantalla;
+                            Escribir "Gracias por ingresar a nuestro sistema de observaciones";
+                            Escribir "";
+                            Escribir "¿Tiene una observación para realizar?";
+                            Escribir "1. Sí";
+                            Escribir "2. No";
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales6
+                            Definir opcion, codigo, opcionc, cedula, cel, opcionm Como Entero;
+                            Definir nombrec, direccion, placa, razon, observacionc, fecha, observacionm, nombrem, data1, data2, observacionm2 Como Caracter;
+                            
+                            observacionm <- "Su moto ha sido revisada y todos los daños han sido corregidos, recuerde hacer revisiones periódicamente.";
+                            nombrem <- "Pepito perez";
+                            data1 <- "Observaciones del cliente: Los frenos no funcionan correctamente";
+                            data2 <- "Fecha de ingreso: 08-01-2022";
+                            
+                            menu();
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Limpiar Pantalla;
+                                    Escribir "**EL MAQUINISTA**";
+                                    Escribir " ";
+                                    Escribir "Bienvenido, por favor ingrese su nombre completo";
+                                    leer nombrec;
+                                    menus();
+                                    leer opcionc;
+                                    Segun opcionc Hacer
+                                        1:
+                                            Limpiar Pantalla;
+                                            Escribir "Bienvenido(a) señor(a) ", nombrec, " por favor complete los siguientes datos";
+                                            ingreso();
+                                        2:
+                                            menuO();
+                                            Leer opcion;
+                                            Si opcion = 1 Entonces
+                                                Escribir "Por favor ingrese la placa de su motocicleta";
+                                                Leer placa;
+                                                Escribir "Número de cédula";
+                                                Leer cedula;
+                                                Escribir "Número telefónico";
+                                                Leer cel;
+                                                Escribir "Por favor ingrese sus observaciones";
+                                                Leer observacionc;
+                                                Limpiar Pantalla;
+                                                Escribir "**El maquinista**";
+                                                Escribir " ";
+                                                Escribir "Nombre del usuario: ", nombrec;
+                                                Escribir "Cedula del usuario: ", cedula;
+                                                Escribir "Número de teléfono: ", cel;
+                                                Escribir "Número de placa: ", placa;
+                                                Escribir "Observación: ", observacionc;
+                                                Escribir " ";
+                                                Escribir "**Observación realizada con éxito**";
+                                                Escribir " ";
+                                                Escribir "Gracias por dejar sus observaciones, su opinión es muy importante para nosotros";
+                                                Escribir "Gracias por elegirnos";
+                                            SiNo
+                                                Escribir "Gracias por elegirnos";
+                                            FinSi
+                                        3:
+                                            Limpiar Pantalla;
+                                            Escribir "Observaciones del mecánico:";
+                                            Escribir " ";
+                                            Escribir "señor(a) ", nombrec, ", ", observacionm;
+                                        De Otro Modo:
+                                            opcionValida();
+                                    FinSegun
+                                2:
+                                    Limpiar Pantalla;
+                                    Escribir "**EL MAQUINISTA**";
+                                    Escribir " ";
+                                    Escribir "Bienvenido, por favor ingrese su código";
+                                    leer codigo;
+                                    Escribir "Bienvenido, ", nombrem;
+                                    Escribir "Indique su solicitud";
+                                    Escribir " ";
+                                    Escribir "1. Reparar una nueva motocicleta";
+                                    Escribir "2. Registrar salida y observaciones";
+                                    leer opcionm;
+                                    Si opcionm = 1 Entonces
+                                        Escribir "por favor digite número de placa";
+                                        leer placa;
+                                        Limpiar Pantalla;
+                                        Escribir "número de placa:", placa;
+                                        Escribir data1;
+                                        Escribir data2;
+                                    SiNo
+                                        Si opcionm = 2 Entonces
+                                            Escribir "por favor digite número de placa";
+                                            leer placa;
+                                            Escribir "Indique fecha de salida";
+                                            leer fecha;
+                                            Escribir "Registre sus observaciones para el cliente";
+                                            leer observacionm2;
+                                            Limpiar Pantalla;
+                                            Escribir "Número de placa:", placa;
+                                            Escribir data1;
+                                            Escribir data2;
+                                            Escribir " ";
+                                            Escribir "Fecha de salida: ", fecha;
+                                            Escribir " ";
+                                            Escribir "Mecánico: ", nombrem;
+                                            Escribir "Observaciones: ", observacionm2;
+                                        SiNo
+                                            opcionValida();
+                                        FinSi
+                                    FinSi
+                                De Otro Modo:
+                                    opcionValida();
+                            FinSegun
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 7</h4>
+                    <p>La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y 
+                        estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra 
+                        (bajo peso, normal, sobrepeso y obeso).</p><br>
+                    <pre class="code">
+                        SubProceso res <- define(a,b,c)
+                            definir res Como Real;;
+                            res<-a/b^2;
+                        FinSubProceso
+
+                        SubProceso menu()
+                            Escribir "Secretaría de salud municipal";
+                            Escribir " ";
+                            Escribir "Calculadora de IMC";
+                            Escribir " ";
+                            Escribir "Por favor indique los siguientes datos";
+                            Escribir " ";
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales7
+                            Definir peso Como Entero;
+                            Definir estatura, IMC Como Real;
+                            
+                            menu();
+                            Escribir "¿Cuál es su peso (en kilogramos)?";
+                            Leer peso;
+                            Escribir "¿Cuál es su estatura (en metros)?";
+                            Leer estatura;
+                            
+                            IMC <- define(peso,estatura,2);
+                            Escribir "Su IMC es de: ", IMC;
+                            
+                                    Si IMC < 18.5 Entonces
+                                        Escribir "Usted tiene bajo peso";
+                                    SiNo
+                                        Si IMC > 18.5 Y IMC < 24.9 Entonces
+                                            Escribir "Usted tiene peso normal";
+                                        SiNo
+                                            Si IMC > 24.9 & IMC < 29.9 Entonces
+                                                Escribir "Usted tiene sobrepeso";
+                                            SiNo
+                                                Escribir "Usted tiene obesidad";
+                                            FinSi
+                                    FinSi
+                                FinSi   
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 8</h4>
+                    <p>El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. 
+                        Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, 
+                        las tortas disponibles y las ventas que se registren diariamente.</p><br>
+                    <pre class="code">
+                        SubProceso menuGeneral()
+                            Escribir "***Pastelería don Carlos***";
+                            Escribir " ";
+                            Escribir "¿Qué desea hacer?";
+                            Escribir " ";
+                            Escribir "1. Registrar pedido";
+                            Escribir "2. Ver stock de tortas";
+                            Escribir "3. Ventas";
+                        FinSubProceso
+
+                        SubProceso menuStock()
+                            Limpiar Pantalla;
+                            Escribir "***Pastelería don Carlos***";
+                            Escribir " ";
+                            Escribir "Stock de tortas";
+                            Escribir " ";
+                            Escribir "1. Tortas de chocolate";
+                            Escribir "2. Tortas de fresa";
+                            Escribir "3. Tortas de vainilla";
+                        FinSubProceso
+
+                        SubProceso stockC()
+                            Escribir "***Pastelería don Carlos***";
+                            Escribir " ";
+                            Escribir "Stock tortas de chocolate";
+                            Escribir " ";
+                            Escribir "1 porción_______18 unidades";
+                            Escribir "4 porciones_____16 unidades";
+                            Escribir "8 porciones_____7  unidades";
+                            Escribir "12 porciones____9  unidades";
+                        FinSubProceso
+
+                        SubProceso stockF()
+                            Escribir "***Pastelería don Carlos***";
+                            Escribir " ";
+                            Escribir "Stock tortas de fresa";
+                            Escribir " ";
+                            Escribir "1 porción_______43 unidades";
+                            Escribir "4 porciones_____12 unidades";
+                            Escribir "8 porciones_____7  unidades";
+                            Escribir "12 porciones____14  unidades";
+                        FinSubProceso
+
+                        SubProceso stockV()
+                            Escribir "***Pastelería don Carlos***";
+                            Escribir " ";
+                            Escribir "Stock tortas de vainilla";
+                            Escribir " ";
+                            Escribir "1 porción_______15 unidades";
+                            Escribir "4 porciones_____32 unidades";
+                            Escribir "8 porciones_____4  unidades";
+                            Escribir "12 porciones____7  unidades";
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales8
+                            Definir registro, ventas, sabor, prod Como Caracter;
+                            Definir stock, opcion, prec, porc, deco, cant, desc Como Entero;
+                            
+                            menuGeneral();
+                            leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Limpiar Pantalla;
+                                    Escribir "***Pastelería don Carlos***";
+                                    Escribir " ";
+                                    Escribir "Registrar pedido";
+                                    Escribir " ";
+                                    Escribir "De qué sabor es la torta?";
+                                    Leer sabor;
+                                    Escribir "Elegir porciones";
+                                    Escribir "1";
+                                    Escribir "4";
+                                    Escribir "8";
+                                    Escribir "12";
+                                    Leer porc;
+                                    Escribir "Elegir decoraciones";
+                                    Escribir "1. ninguna";
+                                    Escribir "2. pocas";
+                                    Escribir "3. normales";
+                                    Escribir "4. muchas";
+                                    Leer deco;
+                                    Escribir "Por favor indique el número de tortas pedidas";
+                                    Leer cant;
+                                    Limpiar Pantalla;
+                                    Escribir "Pedido registrado con éxito";
+                                    Escribir " ";
+                                    Escribir cant, " torta(s) sabor ", sabor, " de ", porc, " porciones y decoraciones tipo ", deco;
+                                2:
+                                    menuStock();
+                                    Leer stock;
+                                    Limpiar Pantalla;
+                                    Si stock = 1 Entonces
+                                        stockC();
+                                    SiNo
+                                        si stock = 2 Entonces
+                                            stockF();
+                                        SiNo
+                                            si stock = 3 Entonces
+                                                stockV();
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                3:
+                                    Limpiar Pantalla;
+                                    Escribir "***Pastelería don Carlos***";
+                                    Escribir " ";
+                                    Escribir "Ventas";
+                                    Escribir " ";
+                                    Escribir "Nombre del producto";
+                                    Leer prod;
+                                    Escribir "sabor";
+                                    Leer sabor;
+                                    Escribir "precio producto";
+                                    Leer prec;
+                                    Escribir "cantidad";
+                                    Leer cant;
+                                    Escribir "descuento";
+                                    leer desc;
+                                    Escribir "total: ", (prec * cant) - ( prec * cant * desc / 100);
+                                    Escribir "Producto registrado satisfactoriamente";
+                                De Otro Modo:
+                                    Escribir "La operación es inválida";
+                            FinSegun
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 9</h4>
+                    <p>El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le 
+                        facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, 
+                        triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p><br>
+                    <pre class="code">
+                        SubProceso areaRectangulo()
+                            Definir Rect Como Real;
+                            Definir l, la Como Real;
+                            Limpiar Pantalla;
+                            Escribir "Área de un rectángulo";
+                            Escribir "Ingrese el lado 1";
+                            Leer l;
+                            Escribir "Ingrese el lado 2";
+                            Leer la;
+                            Rect <- l*la;
+                            Escribir "El área es: ", Rect;
+                        FinSubProceso
+
+                        SubProceso areaTriangulo()
+                            Definir Tria Como Real;
+                            Definir b, h Como Real;
+                            Limpiar Pantalla;
+                            Escribir "Área de un triángulo";
+                            Escribir "Ingrese la base";
+                            Leer b;
+                            Escribir "Ingrese la altura";
+                            Leer h;
+                            Tria <- (b*h) / 2;
+                            Escribir "El área es: ", Tria;
+                        FinSubProceso
+
+                        SubProceso areaTrapecio()
+                            Definir Trap Como Real;
+                            Definir b, ba, h Como Real;
+                            Limpiar Pantalla;
+                            Escribir "Área de un trapecio";
+                            Escribir "Ingrese la base 1";
+                            Leer b;
+                            Escribir "Ingrese la base 2";
+                            Leer ba;
+                            Escribir "Ingrese la altura";
+                            Leer h;
+                            Trap <- ((b+ba) * h) / 2;
+                            Escribir "El área es: ", Trap;
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales9
+                            Definir opcion Como Entero;
+                                
+                            Escribir "¿Qué operación desea realizar?";
+                            Escribir " ";
+                            Escribir "1. Área de un rectángulo";
+                            Escribir "2. Área de un triángulo";
+                            Escribir "3. Área de un trapecio";
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    areaRectangulo();
+                                2:
+                                    areaTriangulo();
+                                3:
+                                    areaTrapecio();
+                                De Otro Modo:
+                                    Escribir "La operación no existe";
+                            FinSegun
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 10</h4>
+                    <p>El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, 
+                        se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. 
+                        En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p><br>
+                    <pre class="code">
+                        SubProceso menuGeneral()
+                            Escribir " ";
+                            Escribir " ";
+                            Escribir "¿Qué operación desea realizar?";
+                            Escribir " ";
+                            Escribir "1. Realizar ingreso";
+                            Escribir "2. Realizar retiro";
+                            Escribir "3. Consultar saldo";
+                        FinSubProceso
+
+                        SubProceso ingresos()
+                            Limpiar Pantalla;
+                            Escribir "*******Su banco fiel*******";
+                            Escribir " ";
+                            Escribir "Realizar ingreso";
+                            Escribir "Por favor ingrese un monto";
+                        FinSubProceso
+
+                        SubProceso retiros()
+                            Limpiar Pantalla;
+                            Escribir "*******Su banco fiel*******";
+                            Escribir " ";
+                            Escribir "Realizar retiro";
+                            Escribir "Por favor ingrese un monto";
+                        FinSubProceso
+
+                        Proceso CI_Semana2_Taller2_eCondicionales10
+                            Definir titular Como Caracter;
+                            Definir opcion, consultaSaldo, ingreso, retiro Como Entero;
+                            
+                            //Cuenta
+                            titular <- "Carlos Ardila";
+                            consultaSaldo <- 10500000;
+                            
+                            Escribir "*******Su banco fiel*******";
+                            Escribir " ";
+                            Escribir "Bienvenido ", titular, "!.";
+                            menuGeneral();
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    ingresos();
+                                    Leer ingreso;
+                                    Si ingreso < 0 Entonces
+                                        Escribir "No se pueden ingresar valores negativos";
+                                        Escribir "Por favor, intente con otro monto";
+                                    SiNo
+                                        Escribir "Ingreso realizado con éxito";
+                                        Escribir " ";
+                                        Escribir titular, ", su saldo actual es: $", consultaSaldo + ingreso;
+                                    FinSi
+                                2:
+                                    retiros();
+                                    Leer retiro;
+                                    
+                                    Si retiro > consultaSaldo Entonces
+                                        Escribir "Los retiros no pueden ser mayores al saldo actual";
+                                        Escribir "Por favor, intente con otro monto";
+                                    SiNo
+                                        Escribir "Retiro realizado con éxito";
+                                        Escribir " ";
+                                        Escribir titular, ", su saldo actual es: $", consultaSaldo - retiro;
+                                    FinSi
+                                3:
+                                    Limpiar Pantalla;
+                                    Escribir "*******Su banco fiel*******";
+                                    Escribir " ";
+                                    Escribir titular, ", su saldo actual es: $", consultaSaldo;
+                                De Otro Modo:
+                                    Escribir "La operación es inválida";
+                            FinSegun
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

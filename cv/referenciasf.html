@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ReferenciasF_CV Carlos Ardila</title>
+        <link rel="stylesheet" href="CSS3/style.css">
+        <script src="JS/archivo.js"></script>
+    </head>
+    <body onload="main()">
+
+        <header>
+            <hgroup class="headerColor">
+                <h1>CARLOS ARDILA</h1>
+                <H2>Desarrollador</H2>
+            </hgroup>
+            <nav>
+                <div class="nav">
+                    <div>
+                        <figure>
+                            <img src="images/foto.jpg" alt="foto" id="foto">
+                        </figure>
+                    </div>
+                    <div class="links">
+                        <a href="index.html" class="aLink"><b>PERFIL</b></a><br>
+                        <a href="experiencia.html" class="aLink"><b>experiencia laboral</b></a><br>
+                        <a href="referenciasp.html" class="aLink"><b>referencias personales</b></a><br>
+                        <a href="estudios.html" class="aLink"><b>estudios realizados</b></a>
+                    </div> 
+                    <form>
+                        <select name="backgroungChanger" id="selection" class="changer" onchange="colorChanger()">
+                            <option value="">Default</option>
+                            <option value="#bbb">Clear</option>
+                            <option value="#9575cd">Deep purple</option>
+                            <option value="#aed581">Light green</option>
+                        </select>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <main class="mainColor">
+            <section>
+                <h3 class="tituloInterno">REFERENCIAS FAMILIARES</h3>
+                <div class="contenedor">
+
+                <article class="cuadro">
+                    <h4 class="box">Lucy Esperanza Marín</h4>
+                    <button class="desplegable"><a href="javascript:open1();" class="flecha"><b>🡇</b></a></button>
+                    <div class="float1" style="display:'';">
+                        <button class="desplegable"><a href="javascript:close1();" class="flecha"><b>🡅</b></a></button>
+                        <ul type="circle">
+                            <li>Parentesco: madre</li><br>
+                            <li>Teléfono: 3206595940</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cuadro">
+                    <h4 class="box">Yezid Ardila</h4>
+                    <button class="desplegable"><a href="javascript:open2();" class="flecha"><b>🡇</b></a></button>
+                    <div class="float2" style="display:'';">
+                        <button class="desplegable"><a href="javascript:close2();" class="flecha"><b>🡅</b></a></button>
+                        <ul type="circle">
+                            <li>Parentesco: tío</li><br>
+                            <li>Teléfono: 3163624462</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cuadro">
+                    <h4 class="box">Alejandro Hernández</h4>
+                    <button class="desplegable"><a href="javascript:open3();" class="flecha"><b>🡇</b></a></button>
+                    <div class="float3" style="display:'';">
+                        <button class="desplegable"><a href="javascript:close3();" class="flecha"><b>🡅</b></a></button>
+                        <ul type="circle">
+                            <li>Parentesco: primo</li><br>
+                            <li>Teléfono: 3136802797</li>
+                        </ul>
+                    </div>
+                </article>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="footerColor">
+            <a href="downloads/carlosArdilaCV.pdf" target="_blank" class="descarga"><b>Descargar CV</b></a>
+            <figure>
+                <img src="images/sello.png" alt="sello" id="sello">
+            </figure>
+            <p class="copyright">Copyright © 2022 Carlos Ardila</p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Variables e impresión</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Ejercicios de Variables e impresión</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="pseint.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="containerCards">
+            <div class="youtubeVideo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZmC-MXoJab8" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4 class="videoName">Video grabado</h4>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Realizar un programa el cual solicite su nombre y apellidos.</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller1_E1
+                        
+                            Definir nombre Como Caracter;
+                            Definir apellidos Como Caracter;
+                            
+                            Escribir "¿Cuál es tu nombre?";
+                            Leer nombre;
+                            
+                            Escribir "¿Cuáles son tus apellidos?";
+                            Leer apellidos;
+                        
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller1_E2
+                        
+                            Definir nombre Como Caracter;
+                            Definir apellidos Como Caracter;
+                            Definir edad Como Entero;
+                            Definir estatura Como Real;
+                            
+                            Escribir "¿Cuál es tu nombre?";
+                            Leer nombre;
+                            
+                            Escribir "¿Cuáles son tus apellidos?";
+                            Leer apellidos;
+                            
+                            Escribir "¿Cuál es tu edad?";
+                            Leer edad;
+                            
+                            Escribir "¿Cuál es tu estatura (en metros)?";
+                            Leer estatura;
+                        
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. 
+                        Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller1_E3
+                        
+                            Definir miNombre Como Caracter;
+                            Definir miApellidos Como Caracter;
+                            Definir padreNombre Como Caracter;
+                            Definir padreApellidos Como Caracter;
+                            Definir madreNombre Como Caracter;
+                            Definir madreApellidos Como Caracter;
+                            
+                            Escribir "¿Cuál es tu nombre?";
+                            Leer miNombre;
+                            
+                            Escribir "¿Cuáles son tus apellidos?";
+                            Leer miApellidos;
+                            
+                            Escribir "¿Cuál es el nombre de tu padre?";
+                            Leer padreNombre;
+                            
+                            Escribir "¿Cuáles son los apellidos de tu padre?";
+                            Leer padreApellidos;
+                            
+                            Escribir "¿Cuál es el nombre de tu madre?";
+                            Leer madreNombre;
+                            
+                            Escribir "¿Cuáles son los apellidos de tu madre?";
+                            Leer madreApellidos;
+                            
+                            Limpiar Pantalla;
+                            
+                            Escribir "Yo ", miNombre, " ", miApellidos, ", ", "soy hijo de ", madreNombre," ", madreApellidos, " y ", padreNombre," ", padreApellidos, ".";
+                        
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje 
+                        "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller1_E4
+                        
+                            Definir ciudadCapital Como Caracter;
+                            Definir nombrePais Como Caracter;
+                            
+                            Escribir "Dime el nombre de una ciudad capital";
+                            Leer ciudadCapital;
+                            
+                            Escribir "Dime el nombre del país del cual la ciudad anterior es capital";
+                            Leer nombrePais;
+                            
+                            Limpiar Pantalla;
+                            
+                            Escribir "La ciudad ", ciudadCapital, ", es la capital del país ", nombrePais;
+                        
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. 
+                        Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, 
+                        tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</p><br>
+                    <pre class="code">
+                        Proceso CI_Taller1_E5
+                        
+                            Definir nombreCompletoAmo Como Caracter;
+                            Definir nombreMascota Como Caracter;
+                            Definir edadMascota Como Entero;
+                            Definir tipoMascota Como Caracter;
+                            
+                            Escribir "¿Cuál es tu nombre completo?";
+                            Leer nombreCompletoAmo;
+                            
+                            Escribir "¿Cuál es el nombre de tu mascota?";
+                            Leer nombreMascota;
+                            
+                            Escribir "¿Cuántos años tiene tu mascota?";
+                            Leer edadMascota;
+                            
+                            Escribir "¿Qué tipo de mascota tienes?";
+                            Leer tipoMascota;
+                            
+                            Limpiar Pantalla;
+                            
+                            Escribir nombreMascota, " es un(a) ", tipoMascota, ", el cual, tiene ", edadMascota, " años de edad y ",
+                            nombreCompletoAmo, " es actualmente su dueño(a).";
+                        
+                        FinProceso
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experiencia_CV Carlos Ardila</title>
+        <link rel="stylesheet" href="CSS3/style.css">
+        <script src="JS/archivo.js"></script>
+    </head>
+    <body onload="main()">
+
+        <header>
+            <hgroup class="headerColor">
+                <h1>CARLOS ARDILA</h1>
+                <H2>Desarrollador</H2>
+            </hgroup>
+            <nav>
+                <div class="nav">
+                    <div>
+                        <figure>
+                            <img src="images/foto.jpg" alt="foto" id="foto">
+                        </figure>
+                    </div>
+                    <div class="links">
+                        <a href="index.html" class="aLink"><b>PERFIL</b></a><br>
+                        <a href="referenciasp.html" class="aLink"><b>referencias personales</b></a><br>
+                        <a href="referenciasf.html" class="aLink"><b>referencias familiares</b></a><br>
+                        <a href="estudios.html" class="aLink"><b>estudios realizados</b></a>
+                    </div> 
+                    <form>
+                        <select name="backgroungChanger" id="selection" class="changer" onchange="colorChanger()">
+                            <option value="">Default</option>
+                            <option value="#bbb">Clear</option>
+                            <option value="#9575cd">Deep purple</option>
+                            <option value="#aed581">Light green</option>
+                        </select>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <main class="mainColor">
+            <section>
+                <h3 class="tituloInterno">EXPERIENCIA LABORAL</h3>
+                <article class="texto">
+                    <h4>Desarrollador Full-Stack</h4>
+                    <button class="desplegable"><a href="javascript:mostrar();" class="flecha"><b>🡇</b></a></button>
+                    <div class="flotante" style="display:'';">
+                        <button class="desplegable"><a href="javascript:cerrar();" class="flecha"><b>🡅</b></a></button>
+                        <p>Medellín, Antioquia <br>
+                            Sofka <br>
+                            2023 <br>
+                            Desarrollo y diseño de varias aplicaciones y sitos webs trabajando en conjunto con un gran equipo de trabajo. <br>
+                            Aumento del 45% de la eficiencia y un manejo adecuado de errores mediante el empleo de las buenas prácticas.
+                        </p>
+                    </div>
+                </article>
+                <article class="texto">
+                    <h4>Desarrollador Front-End y ReactJS</h4>
+                    <button class="desplegable"><a href="javascript:mostrar2();" class="flecha"><b>🡇</b></a></button>
+                    <div class="flotante2" style="display:'';">
+                        <button class="desplegable"><a href="javascript:cerrar2();" class="flecha"><b>🡅</b></a></button>
+                        <p>Pereira, Risaralda <br>
+                            A.M. Diseño y Mobiliario <br>
+                            2021-2022 <br>
+                            Desarrollo de 2 aplicaciones empresariales a través de ReactJS; Una aplicación de inventario y stock <br>
+                            que permitió un manejo 3 veces más eficiente de todo el proceso de pedidos y otra para que los <br>
+                            vendedores muestren a los clientes un registro de los diseños y proyectos realizados..
+                        </p>
+                    </div>
+                </article>
+                <article class="texto">
+                    <h4>Arquitecto freelance</h4>
+                    <button class="desplegable"><a href="javascript:mostrar3();" class="flecha"><b>🡇</b></a></button>
+                    <div class="flotante3" style="display:'';">
+                        <button class="desplegable"><a href="javascript:cerrar3();" class="flecha"><b>🡅</b></a></button>
+                        <p>Pereira, Risaralda<br>
+                            2017-2021 <br>
+                            Proceso completo de diseño y construcción de edificaciones residenciales unifamiliares y multifamiliares.
+                        </p>
+                    </div>
+                </article>
+                <article class="texto">
+                    <h4>Práctica profesional</h4>
+                    <button class="desplegable"><a href="javascript:mostrar4();" class="flecha"><b>🡇</b></a></button>
+                    <div class="flotante4" style="display:'';">
+                        <button class="desplegable"><a href="javascript:cerrar4();" class="flecha"><b>🡅</b></a></button>
+                        <p>Santa Rosa de Cabal, Risaralda<br>
+                            ARQ Project <br>
+                            2015 <br>
+                            Diseño, dibujo, delineación y soporte técnico en proyectos residenciales, comerciales y de oficinas.
+                        </p>
+                    </div>
+                    <br>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footerColor">
+            <a href="downloads/carlosArdilaCV.pdf" target="_blank" class="descarga"><b>Descargar CV</b></a>
+            <figure>
+                <img src="images/sello.png" alt="sello" id="sello">
+            </figure>
+            <p class="copyright">Copyright © 2022 Carlos Ardila</p>
+        </footer>
+        
+    </body>
+</html>

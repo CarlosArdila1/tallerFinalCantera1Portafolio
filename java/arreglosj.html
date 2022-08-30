@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Arreglos</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="../images/sello.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                <h2>Arreglos en Java</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="../index.html"><button class="btn btn-info me-md-2" type="button">Portafolio</button></a>
+                    <a href="java.html"><button class="btn btn-info me-md-2" type="button">Regresar</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="containerCards">
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 1</h4>
+                    <p>Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, 
+                        se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</p>
+                    <ul type="circle">
+                        <li>[0] = 55</li>
+                        <li>[1] = 99</li>
+                        <li>[2] = 11</li>
+                        <li>[3] = 56</li>
+                        <li>[4] = 69</li>
+                    </ul><br>
+                    <pre class="code">
+                        package com.sofka.taller4;
+
+                        import java.io.IOException;
+                        import java.util.Scanner;
+
+                        public class Ejercicio1T4 {
+
+                            private int option;
+                            int[] num = new int[5];
+                            private Scanner input;
+                            
+                            public void Ejercicio1T4() throws IOException {
+                                input = new Scanner (System.in);
+                                
+                                do {
+                                    menu();
+                                    switch (option) {
+                                    case 1:
+                                        ask1();
+                                        num[0] = captureDataInt();
+                                        
+                                        ask2();
+                                        num[1] = captureDataInt();
+                                        
+                                        ask3();
+                                        num[2] = captureDataInt();
+                                        
+                                        ask4();
+                                        num[3] = captureDataInt();
+                                        
+                                        ask5();
+                                        num[4] = captureDataInt();
+                                        
+                                        enterContinue();
+                                        break;
+                                        
+                                    case 2:	
+                                        
+                                        System.out.println("[0]  =  " + num[0]);
+                                        System.out.println("[1]  =  " + num[1]);
+                                        System.out.println("[2]  =  " + num[2]);
+                                        System.out.println("[3]  =  " + num[3]);
+                                        System.out.println("[4]  =  " + num[4]);
+                                        enterContinue();
+                                        break;
+
+                                    default:
+                                        enterContinue();
+                                        break;
+                                    }
+                                } while (option != 3);
+                                System.out.println("Salida exitosa");	
+                            }
+                            
+                            
+                            private void menu() {
+                                System.out.println("Bienvenido");
+                                System.out.println("");
+                                System.out.println("1. Ingresar números");
+                                System.out.println("2. Ver vector");
+                                System.out.println("3. Salir");
+                                option = captureOption();
+                            }
+                            
+                            private void enterContinue() throws IOException {
+                                System.out.println("");
+                                System.out.println("Presione enter para continuar");
+                                System.in.read();
+                            }
+                            
+                            private int captureOption() {
+                                Scanner input = new Scanner (System.in);
+                                return input.nextInt();
+                            }
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                            
+                            private void ask1() {System.out.println("Digita primer número");}
+                            private void ask2() {System.out.println("Digita segundo número");}
+                            private void ask3() {System.out.println("Digita tercer número");}
+                            private void ask4() {System.out.println("Digita cuarto número");}
+                            private void ask5() {System.out.println("Digita quinto número");}
+                            
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 2</h4>
+                    <p>Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; 
+                        después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e 
+                        imprimir los números pares e impares. Ejemplo</p>
+                        <ul type="circle">
+                            <li>Números pares: 2, 4, 6, 8, 10</li>
+                            <li>Números impares: 1, 3, 5, 7, 9</li>
+                        </ul><br>
+                    <pre class="code">
+                        package com.sofka.taller4;
+
+                        public class Ejercicio2T4 {
+                            int[] random = new int[20];
+                            
+                            public void Ejercicio2T4() {
+                                
+                                for (int i = 0; i <= 19; i++) {
+                                    random[i] = (int) (Math.random()*100+1);
+                                }
+                                
+                                System.out.print("Números pares:   ");
+                                for (int j = 0; j <= 19; j++) {
+                                    if (random[j] % 2 == 0) {
+                                        System.out.print(random[j] + ", ");
+                                    }
+                                }
+                                System.out.println("");
+                                System.out.print("Números impares:   ");
+                                for (int j = 0; j <= 19; j++) {
+                                    if (random[j] % 2 == 1) {
+                                        System.out.print(random[j] + ", ");
+                                    }
+                                }
+                                System.out.println("");
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 3</h4>
+                    <p>Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller4;
+
+                        public class Ejercicio3T4 {
+                            private int counter, j;
+                            
+                            public void Ejercicio3T4() {
+                                
+                                System.out.println("Números primos: ");
+                                
+                                for (int i = 1; i <= 1000; i++) {
+                                    j = 1;
+                                    counter = 0;
+                                    
+                                    while (j <= i) {
+                                        if (i % j == 0) {
+                                            counter = (counter + 1);
+                                        }
+                                        j = (j + 1);
+                                    }
+                                    
+                                    if (counter == 2) {
+                                        System.out.print(i + ", ");
+                                    }
+                                }
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 4</h4>
+                    <p>Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</p>
+                    <ul type="circle">
+                        <li>01 02 03 04 05</li>
+                        <li>06 07 08 09 10</li>
+                        <li>11 12 13 14 15</li>
+                        <li>16 17 18 19 20</li>
+                    </ul>
+                    <p>Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</p>
+                    <ul type="circle">
+                        <li>01 02 03 04 05</li>
+                        <li>10 09 08 07 06</li>
+                        <li>11 12 13 14 15</li>
+                        <li>20 19 18 17 16</li>
+                    </ul><br>
+                    <pre class="code">
+                        package com.sofka.taller4;
+
+                        public class Ejercicio4T4 {
+                            
+                            String[][] bArray = new String[4][5];
+
+                            public void Ejercicio4T4() {
+                                bArray[0][0] = "01"; bArray[0][1] = "02"; bArray[0][2] = "03"; bArray[0][3] = "04"; bArray[0][4] = "05";
+                                bArray[1][0] = "06"; bArray[1][1] = "07"; bArray[1][2] = "08"; bArray[1][3] = "09"; bArray[1][4] = "10";
+                                bArray[2][0] = "11"; bArray[2][1] = "22"; bArray[2][2] = "13"; bArray[2][3] = "14"; bArray[2][4] = "15";
+                                bArray[3][0] = "16"; bArray[3][1] = "17"; bArray[3][2] = "18"; bArray[3][3] = "19"; bArray[3][4] = "20";
+                                
+                                System.out.println("*******");
+                                System.out.println("Matriz original:");
+                                for (int fila = 0; fila <= 3; fila++) {
+                                    for (int columna = 0; columna <= 4; columna++) {
+                                        System.out.print(bArray[fila][columna] + " ");
+                                    }
+                                    System.out.println(" ");
+                                }
+                                
+                                System.out.println("");
+                                System.out.println("Matriz modificada:");
+                                for (int fila = 0; fila <= 0; fila++) {
+                                    for (int columna = 0; columna <= 4; columna++) {
+                                        System.out.print(bArray[fila][columna] + " ");
+                                    }
+                                    System.out.println(" ");
+                                }
+                                
+                                for (int fila = 1; fila <= 1; fila++) {
+                                    for (int columna = 4; columna >= 0; columna--) {
+                                        System.out.print(bArray[fila][columna] + " ");
+                                    }
+                                    System.out.println(" ");
+                                }
+                                
+                                for (int fila = 2; fila <= 2; fila++) {
+                                    for (int columna = 0; columna <= 4; columna++) {
+                                        System.out.print(bArray[fila][columna] + " ");
+                                    }
+                                    System.out.println(" ");
+                                }
+                                
+                                for (int fila = 3; fila <= 3; fila++) {
+                                    for (int columna = 4; columna >= 0; columna--) {
+                                        System.out.print(bArray[fila][columna] + " ");
+                                    }
+                                    System.out.println(" ");
+                                }
+                                
+                                
+                            }
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div class="cardStop card border-info mb-3">
+                <div class="card-body">
+                    <h4>Ejercicio 5</h4>
+                    <p>Se debe de imprimir el siguiente cuadro</p>
+                    <img src="../images/arreglos5.png" alt="" height="225" class="d-inline-block align-text-top"><br>
+                    <p>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una 
+                        matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</p><br>
+                    <pre class="code">
+                        package com.sofka.taller4;
+
+                        import java.util.Scanner;
+
+                        public class Ejercicio5T4 {
+                            private int row, column;
+                            int[][] bArray = new int[11][11];
+                            private Scanner input;
+
+                            public void Ejercicio5T4() {
+                                input = new Scanner (System.in);
+                                
+                                for (int fila = 1; fila <= 10; fila++) {
+                                    for (int columna = 1; columna <= 10; columna++) {
+                                        bArray[fila][columna] = (fila*columna);
+                                    }
+                                }
+                                
+                                for (int fila = 1; fila <= 1; fila++) {
+                                    System.out.println("                       COLUMNA");
+                                    System.out.println(" " + 0 + "     " + 1 + "     " + 2 + "     " + 3 + "     " + 4 + "     " + 5 + "     " + 6 + "     " + 7 + "     " + 8 + "     " + 9);
+                                    System.out.println("");
+                                }
+                                
+                                for (int fila = 1; fila <= 10; fila++) {
+                                    for (int columna = 1; columna <= 10; columna++) {
+                                        if (fila != 10) {
+                                            System.out.print(columna + "x" + fila + "   ");
+                                        } else {
+                                            System.out.print(columna + "x" + fila + "  ");
+                                        }
+                                    }
+                                    System.out.println("");
+                                }
+                                
+                                askRow();
+                                row = captureDataInt();
+                                
+                                askColumn();
+                                column = captureDataInt();
+                                
+                                System.out.println("");
+                                System.out.println("");
+                                System.out.println("La respuesta es: " + bArray[row+1][column+1]);
+                                
+                            }
+                            
+                            
+                            private int captureDataInt() {
+                                return input.nextInt();
+                            }
+                            
+                            private void askRow() {System.out.println("Ingrese posición de la fila (0-9):");}
+                            private void askColumn() {System.out.println("Ingrese posición de la columna(0-9):");}
+                        }
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
